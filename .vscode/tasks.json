@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start ProofPlan",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Check and build ProofPlan",
+      "type": "npm",
+      "script": "build",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}
