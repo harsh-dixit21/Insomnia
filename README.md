@@ -13,6 +13,10 @@ npm install
 npm run dev
 ```
 
+Open the Local URL printed by Vite (normally `http://127.0.0.1:5173/`). In VS Code, use the integrated terminal to run this command. The source `index.html` loads JSX modules and must be served by Vite; opening it directly or through the Live Server extension does not compile React.
+
+`npm run check` renders both heroes and the supplied components to catch runtime JSX errors. The production build runs this check first.
+
 Production build and preview:
 
 ```sh
