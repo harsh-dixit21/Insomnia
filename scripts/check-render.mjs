@@ -18,7 +18,14 @@ try {
     motion: { current: { progress: 0, reduced: false } },
     paused: { current: false },
   })).includes('webgl-scene'));
-  console.log('Render checks passed: both heroes, primary action, TechText, and MeadowScene.');
+  const { default: ErrorBoundary } = await server.ssrLoadModule('/src/ErrorBoundary.jsx');
+  const recovery = new ErrorBoundary({});
+  recovery.state = ErrorBoundary.getDerivedStateFromError(new Error('Example render failure'));
+  const recoveryHtml = renderToString(recovery.render());
+  assert.ok(recoveryHtml.includes('role="alert"'), 'Render failures must show an accessible recovery message');
+  assert.ok(recoveryHtml.includes('Reload ProofPlan'), 'Recovery must offer a retry action');
+  assert.ok(renderToString(React.createElement(ErrorBoundary, null, 'Healthy page')).includes('Healthy page'));
+  console.log('Render checks passed: heroes, components, and error recovery.');
 } finally {
   await server.close();
 }
