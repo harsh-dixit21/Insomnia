@@ -6,6 +6,8 @@ The hero's **Documentation** button opens the [product and technical PDF](public
 
 ## Run
 
+For Vercel with a durable backend, follow [the hosting guide](docs/deployment.md). The included Render blueprint requires paid persistent hosting; Vercel alone does not run the SQLite database or your desktop's Ollama model.
+
 Use Node.js 24.11+ (the backend uses Node's built-in SQLite support):
 
 ```sh

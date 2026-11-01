@@ -12,3 +12,5 @@ output/
 *.tsbuildinfo
 .env*
 !.env.example
+
+.vercel

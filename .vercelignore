@@ -1,0 +1,12 @@
+.env
+.env.*
+.data
+.git
+.reference
+.taste-skill
+node_modules
+dist
+output
+tmp
+*.sqlite*
+*.tsbuildinfo
