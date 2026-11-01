@@ -1,9 +1,11 @@
 import {createApp} from './app.mjs';
 import {serviceConfig} from './config.mjs';
+import {listen} from './listen.mjs';
 import {resolve,extname} from 'node:path';import {fileURLToPath} from 'node:url';
 import {stat} from 'node:fs/promises';import {createReadStream} from 'node:fs';
 const root=fileURLToPath(new URL('../',import.meta.url));
-const dev=process.argv.includes('--dev'),port=Number(process.env.INSOMNIA_PORT||5181),host=process.env.INSOMNIA_HOST||'127.0.0.1';
+const dev=process.argv.includes('--dev'),requestedPort=Number(process.env.INSOMNIA_PORT||5181),host=process.env.INSOMNIA_HOST||'127.0.0.1';
+let port=requestedPort;
 let vite,localOidc;
 const local=(dev||process.env.INSOMNIA_LOCAL_SERVICES==='true')&&['127.0.0.1','localhost','::1'].includes(host);
 const config=serviceConfig(process.env,{local});
@@ -24,14 +26,21 @@ const app=createApp({dbPath:process.env.INSOMNIA_DB||resolve(root,'.data/insomni
 let closing=false;
 async function cleanup(){if(closing)return;closing=true;try{await vite?.close();}finally{try{await localOidc?.close();}finally{await app.close();}}}
 try{
- // Claim the application port before starting any secondary services. A second
- // invocation exits cleanly without opening another HMR or identity listener.
- await new Promise((resolve,reject)=>{app.server.once('error',reject);app.server.listen(port,host,()=>{app.server.removeListener('error',reject);resolve();});});
+ // Local development can move to another port. Fixed public origins and
+ // external SSO registrations must retain their explicitly configured port.
+ const fallback=dev&&!process.env.INSOMNIA_ORIGIN&&!config.oidc.issuer;
+ port=await listen(app.server,{host,port,fallback});
+ if(!process.env.INSOMNIA_ORIGIN){const origin=new URL(config.origin);origin.port=String(port);config.origin=origin.origin;}
+ process.env.INSOMNIA_PORT=String(port);
+ if(port!==requestedPort)console.log(`Port ${requestedPort} is busy; using ${port} instead.`);
 if(local&&!config.oidc.issuer&&process.env.INSOMNIA_LOCAL_SSO!=='false'){
  const {createLocalOidc}=await import('./local-oidc.mjs');
- localOidc=await createLocalOidc({port:Number(process.env.INSOMNIA_SSO_PORT||5182),origin:config.origin});
+ const ssoPort=Number(process.env.INSOMNIA_SSO_PORT||(port<65535?port+1:0));
+ const ssoOptions={origin:config.origin,...(process.env.INSOMNIA_LOCAL_SSO_FILE?{credentialsFile:process.env.INSOMNIA_LOCAL_SSO_FILE}:{})};
+ try{localOidc=await createLocalOidc({port:ssoPort,...ssoOptions});}
+ catch(error){if(!dev||error.code!=='EADDRINUSE')throw error;localOidc=await createLocalOidc({port:0,...ssoOptions});console.log(`Local SSO port ${ssoPort} is busy; using ${new URL(localOidc.issuer).port} instead.`);}
  Object.assign(config.oidc,{issuer:localOidc.issuer,clientId:localOidc.credentials.clientId,secret:localOidc.credentials.clientSecret,allowHttp:true,label:'Local development SSO'});
- console.log('Local SSO enabled; development credentials are in .data/local-sso.json.');
+ console.log(`Local SSO enabled at ${localOidc.issuer}; development credentials are in .data/local-sso.json.`);
 }
  if(dev){const{createServer}=await import('vite');vite=await createServer({root,server:{middlewareMode:{server:app.server},hmr:{server:app.server}},appType:'mpa'});}
  console.log(`Insomnia ${dev?'development':'production'} server: http://${host}:${port}/\nSQLite persistence enabled; API and UI share one origin.`);

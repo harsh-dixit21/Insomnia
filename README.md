@@ -78,7 +78,7 @@ The app includes shared workspaces, recovery, OIDC SSO, persisted integration re
 
 ## Server configuration
 
-Run one full-stack server per port. If `npm run dev` reports that its port is already in use, use the existing app or stop its terminal with Ctrl+C before starting again. Development hot reload shares the application port; it no longer requires port 24678. For a separate instance, set `INSOMNIA_PORT` and a distinct `INSOMNIA_SSO_PORT` in `.env`. A missing `.env` is optional, and Node's SQLite experimental warning does not stop startup.
+`npm run dev` automatically selects another available port when its preferred port is busy. Open the exact URL printed in that terminal. Hot reload, sign-in, reset links and the local SSO callback use the selected address; local SSO also selects a free port if needed. Production, an explicitly set `INSOMNIA_ORIGIN`, and externally configured SSO keep their fixed ports. A missing `.env` is optional, and Node's SQLite experimental warning does not stop startup.
 
 For local sign-in, run `npm run dev` and open `http://127.0.0.1:5181/portal/#auth`. Keep that terminal running. Standalone Vite development and preview servers also proxy `/api` to the full-stack server (using `INSOMNIA_PORT` when configured); restart an older preview process after updating its configuration. Opening HTML through VS Code Live Server does not start the backend. The client rejects HTML API responses and offers connection recovery without clearing your form.
 
