@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.reference/
+.vite/
+.taste-skill/
+*.tsbuildinfo
+.env*
+!.env.example
