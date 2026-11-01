@@ -1,5 +1,11 @@
 # Hosting Insomnia on Vercel with a persistent backend
 
+## Current Vercel-native authentication
+
+The production project now connects to Neon PostgreSQL on its Free plan. When `DATABASE_URL` is present and `INSOMNIA_BACKEND_URL` is absent, the gateway uses `server/cloud.mjs` directly on Vercel. Signup, scrypt password verification, hashed server sessions, logout, workspace loading, workspace edits, optimistic concurrency, and dashboard insights use the cloud database. Cookies are Secure and HttpOnly; mutations require origin, application, and CSRF checks. Login attempts are limited in the database.
+
+Local SQLite accounts are not automatically copied to this database. Register a cloud account separately. The remaining tool, team, recovery, export, and external integration routes have not been migrated to this cloud handler and return an explicit unsupported-feature error. The existing SQLite backend still supports those routes locally. The separate backend configuration below is optional and is not used by the current production authentication deployment.
+
 The Vercel site serves the landing page, portal, and updated 14-page PDF at `/docs/insomnia-documentation.pdf`. Its `/api/*` gateway forwards requests to a separate Node backend. Accounts, sessions, team membership, and evaluations stay in that backend's persistent SQLite database. The gateway preserves cookies, CSRF headers, workspace scope, downloads, and SSO redirects.
 
 ## Backend setup

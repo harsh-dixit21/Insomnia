@@ -1,9 +1,11 @@
 import http from 'node:http';
 import https from 'node:https';
+import cloud from '../server/cloud.mjs';
 
 // Keep the browser and its HttpOnly session cookie on the Vercel origin.
 // SQLite and long-lived services run exclusively on the persistent backend.
 export default function gateway(req, res) {
+  if(process.env.DATABASE_URL&&!process.env.INSOMNIA_BACKEND_URL)return cloud(req,res);
   const fail = (status, error) => {
     if (res.headersSent) return res.destroy();
     res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});
