@@ -1,0 +1,17 @@
+services:
+  insomnia:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5181:5181"
+    env_file: .env
+    environment:
+      INSOMNIA_HOST: 0.0.0.0
+      INSOMNIA_DB: /data/insomnia.sqlite
+      INSOMNIA_LOCAL_SERVICES: "false"
+    volumes:
+      - insomnia-data:/data
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  insomnia-data:

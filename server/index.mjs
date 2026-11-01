@@ -1,9 +1,18 @@
 import {createApp} from './app.mjs';
+import {serviceConfig} from './config.mjs';
 import {resolve,extname} from 'node:path';import {fileURLToPath} from 'node:url';
 import {stat} from 'node:fs/promises';import {createReadStream} from 'node:fs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const dev=process.argv.includes('--dev'),port=Number(process.env.INSOMNIA_PORT||5181),host=process.env.INSOMNIA_HOST||'127.0.0.1';
-let vite;
+let vite,localOidc;
+const local=(dev||process.env.INSOMNIA_LOCAL_SERVICES==='true')&&['127.0.0.1','localhost','::1'].includes(host);
+const config=serviceConfig(process.env,{local});
+if(local&&!config.oidc.issuer&&process.env.INSOMNIA_LOCAL_SSO!=='false'){
+ const {createLocalOidc}=await import('./local-oidc.mjs');
+ localOidc=await createLocalOidc({port:Number(process.env.INSOMNIA_SSO_PORT||5182),origin:config.origin});
+ Object.assign(config.oidc,{issuer:localOidc.issuer,clientId:localOidc.credentials.clientId,secret:localOidc.credentials.clientSecret,allowHttp:true,label:'Local development SSO'});
+ console.log('Local SSO enabled; development credentials are in .data/local-sso.json.');
+}
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.pdf':'application/pdf','.mp4':'video/mp4','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 async function frontend(req,res){
  let publicPath;try{publicPath=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400);return res.end('Invalid path.');}
@@ -16,7 +25,7 @@ async function frontend(req,res){
  }catch{res.writeHead(404);res.end('Not found. Run npm run build before npm start.');}
 }
 if(dev){const{createServer}=await import('vite');vite=await createServer({root,server:{middlewareMode:true},appType:'mpa'});}
-const app=createApp({dbPath:process.env.INSOMNIA_DB||resolve(root,'.data/insomnia.sqlite'),secureCookie:process.env.INSOMNIA_SECURE_COOKIE==='true',allowedOrigin:process.env.INSOMNIA_ORIGIN,frontend});
+const app=createApp({dbPath:process.env.INSOMNIA_DB||resolve(root,'.data/insomnia.sqlite'),secureCookie:process.env.INSOMNIA_SECURE_COOKIE==='true',allowedOrigin:process.env.INSOMNIA_ORIGIN,frontend,config});
 app.server.listen(port,host,()=>console.log(`Insomnia ${dev?'development':'production'} server: http://${host}:${port}/\nSQLite persistence enabled; API and UI share one origin.`));
-async function shutdown(){await vite?.close();await app.close();process.exit(0);}
+async function shutdown(){await vite?.close();await app.close();await localOidc?.close();process.exit(0);}
 process.once('SIGINT',shutdown);process.once('SIGTERM',shutdown);

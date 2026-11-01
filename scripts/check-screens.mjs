@@ -17,7 +17,7 @@ try {
  globalThis.localStorage={getItem:()=>JSON.stringify(sample)};
  const auth=renderToString(React.createElement(WorkspaceProvider,{initialState:sample},React.createElement(AuthPage)));
  assert.ok(auth.includes('Your Insomnia workspace'));
- const routes=['dashboard','evaluations','new','workloads','requirements','tests','evidence','companies','reports','activity','settings','blockers','evaluation/EVAL-001','explainer','fit','deployment','business','call','demo','security','benchmark','migration','saved'];
+ const routes=['dashboard','evaluations','new','workloads','requirements','tests','evidence','companies','reports','activity','settings','blockers','evaluation/EVAL-001','explainer','fit','deployment','business','call','demo','security','benchmark','migration','saved','integrations','team'];
  for(const route of routes){
   location.hash='#'+route;
   const html=renderToString(React.createElement(WorkspaceProvider,{initialState:sample},React.createElement(Dashboard)));

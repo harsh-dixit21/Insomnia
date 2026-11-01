@@ -33,6 +33,25 @@ Product guidance retrieves relevant official-source topics. Use-case rules expos
 
 Start development with `npm run dev`. Build the frontend and run `npm start` for production serving. Both modes use the same database path. SQLite's Node API requires Node.js 24.11+ for this project and currently emits an experimental-feature notice.
 
-Database files, WAL files, and `.env` are ignored by Git. Back up the database through an appropriate SQLite backup procedure or stop the server before copying its database files. A workspace JSON backup contains domain data, not passwords or sessions. There is no automatic password-reset or email service. Keep deployment credentials and database files private.
+Database files, WAL files, and `.env` are ignored by Git. Back up the database through an appropriate SQLite backup procedure or stop the server before copying its database files. A workspace JSON backup contains domain data, not passwords or sessions. Password-reset links can be delivered through SMTP or the private local development outbox. Keep deployment credentials and database files private.
 
-External IOMETE execution, real company research, model-based generation, team invitations and enterprise SSO remain unconnected. Settings reports these capabilities honestly rather than simulating success.
+IOMETE SQLAlchemy, Tavily research and Ollama model connectors are implemented. Shared workspaces, invitations, owner/editor/viewer roles, OIDC SSO and one-time password recovery are implemented. Local development includes explicitly labeled alternatives. See INTEGRATIONS.md for provider configuration and validation boundaries.
+
+## Additional service routes
+
+| Route | Responsibility |
+| --- | --- |
+| `GET /api/auth/options` | Reports SSO and recovery availability without exposing secrets |
+| `POST /api/auth/forgot` | Generates a hashed, expiring reset token and requests mail delivery |
+| `POST /api/auth/reset` | Consumes one reset token, changes the password and revokes sessions |
+| `GET /api/auth/sso/start`, `/callback` | OIDC discovery, PKCE, state/nonce, signed ID-token verification and session creation |
+| `GET /api/team` | Current workspace, membership, invitations and access history |
+| `POST /api/team/switch`, `/accept`, `/invite` | Membership-checked switching and email-bound invitations |
+| `PUT/DELETE /api/team/member`, `DELETE /api/team/invite` | Owner-only access management and invitation revocation |
+| `GET /api/integrations` | Configured modes and workspace-scoped run history |
+| `POST /api/integrations/sql`, `/research`, `/assistant` | Bounded provider calls or labeled local computation with persisted provenance |
+| `GET /api/operations` | Owner-only deployment configuration and database integrity checks |
+
+Team and integration endpoints use the authenticated session and CSRF checks. Public forgot/reset endpoints require the application header and origin checks, with rate limiting; OAuth callback uses its separate browser-bound state cookie. Viewer sessions cannot write workspace data or run integrations. Generic workspace revisions do not cover independent integration history. Integration runs are serialized per workspace and capped at ten requests per user per minute, with the latest 100 persisted.
+
+SSO uses issuer-plus-subject identity mapping. Existing accounts require an authenticated linking flow. Reset and invitation tokens are hashed at rest and never returned in API responses. Local mail and local identity credentials are private files under .data and are unavailable over HTTP. Local services and the loopback identity provider must remain disabled on public deployments.

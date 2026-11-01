@@ -1,0 +1,2 @@
+# Install in a dedicated virtual environment; match the driver to your IOMETE release.
+iomete-sqlalchemy==1.0.23
