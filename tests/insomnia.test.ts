@@ -1,5 +1,5 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
-import {seed,readiness,blockers,planMarkdown,importWorkloads,parseCsv} from '../src/lib/proofplan.ts';
+import {seed,readiness,blockers,planMarkdown,importWorkloads,parseCsv} from '../src/lib/insomnia.ts';
 test('initial demo has no claimed measured outcomes',()=>{const state=seed();assert.equal(state.evaluations.length,4);assert.equal(state.tests.length,12);assert.ok(state.tests.every(t=>t.status==='Proposed'&&!t.result));assert.equal(readiness(state,state.evaluations[0].id),0);assert.equal(blockers(state,new Date('2026-11-01T12:00:00')).length,12);});
 test('completion and blockers reflect only recorded passed tests',()=>{const state=seed();state.tests[0].status='Passed';state.tests[0].result='User supplied reconciliation evidence';assert.equal(readiness(state,state.evaluations[0].id),33);assert.equal(blockers(state,new Date('2026-11-01T12:00:00')).length,11);});
 test('brief preserves buyer criteria and unknowns',()=>{const state=seed();state.evaluations[0].requirements='Critical reports under 2 seconds';const brief=planMarkdown(state,state.evaluations[0].id);assert.match(brief,/Critical reports under 2 seconds/);assert.match(brief,/Result: unknown/);assert.match(brief,/not independently verified/);assert.match(brief,/https:\/\/iomete.com/);});

@@ -1,4 +1,4 @@
-import {parseCsv,type State} from './proofplan.ts';
+import {parseCsv,type State} from './insomnia.ts';
 import {knowledge,fact,searchKnowledge,reviewedOn} from './knowledge.ts';
 
 export type ToolId='explainer'|'fit'|'deployment'|'business'|'call'|'demo'|'security'|'benchmark'|'migration';

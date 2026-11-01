@@ -2,7 +2,7 @@ import { startEndlessVideo } from './video-loop.js';
 import { mountTechText } from './tech-text.js';
 const wordmark = document.querySelector('.wordmark');
 try {
-  mountTechText(document.querySelector('.tech-text'), {text:'ProofPlan',fontFamily:'Inter',fontWeight:600,fontSize:150,reveal:'letter',dashLength:4,dashGap:2,specks:15,intro:'none',introDuration:2,clickKick:true,guides:false,sweep:true});
+  mountTechText(document.querySelector('.tech-text'), {text:'Insomnia',fontFamily:'Inter',fontWeight:600,fontSize:150,reveal:'letter',dashLength:4,dashGap:2,specks:15,intro:'none',introDuration:2,clickKick:true,guides:false,sweep:true});
   wordmark.classList.add('canvas-ready');
 } catch (error) { console.error('TechText could not start:',error); }
 const burger=document.querySelector('.burger'), menu=document.querySelector('.mobile-menu'), overlay=document.querySelector('.menu-overlay');

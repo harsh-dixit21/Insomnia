@@ -1,9 +1,9 @@
 import {createContext,useContext,useState,useRef,useEffect,type ReactNode} from 'react';
-import {seed,type State} from '@/lib/proofplan';
-import {emptyWorkspace,validateWorkspace} from '@/lib/workspace-data';
+import {seed,type State} from '@/lib/insomnia';
+import {emptyWorkspace,validateWorkspace,workspaceStorageKey,readStoredWorkspace} from '@/lib/workspace-data';
 export type Role='Buyer'|'Sales engineer'|'Security lead';
-const key='proofplan-workspace-v1';
-function load(){try{const raw=localStorage.getItem(key);if(raw)return validateWorkspace(JSON.parse(raw));}catch{}return emptyWorkspace();}
+const key=workspaceStorageKey;
+function load(){try{return readStoredWorkspace(localStorage);}catch{}return emptyWorkspace();}
 type ContextValue={state:State;role:Role;setRole:(r:Role)=>void;notice:string;notify:(message:string)=>void;update:(fn:(s:State)=>void,action:string)=>boolean;reset:()=>void;clear:()=>void;restore:(data:unknown)=>void};
 const Context=createContext<ContextValue|null>(null);
 export function WorkspaceProvider({children}:{children:ReactNode}){

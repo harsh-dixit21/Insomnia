@@ -1,4 +1,4 @@
-# ProofPlan
+# Insomnia
 
 IOMETE evaluation workspace using the exact landing-page composition, animated video, TechText lettering, authentication artwork, dashboard shell, primitives, and chart styling imported from the SIH-1 Tenet project.
 
@@ -22,7 +22,7 @@ npm run preview
 
 ## Imported design
 
-The video landing page, continuous crossfade, interactive heading, responsive menus, monochrome styling, animated authentication canvas, sidebar, dashboard cards, charts, tables, buttons, inputs, badges, avatars, progress, floating dock, and motion primitives come from `C:\SIH\tenet-source`. Domain screens have been adapted to ProofPlan. Older optional visual components remain available in `src/components/ui`.
+The video landing page, continuous crossfade, interactive heading, responsive menus, monochrome styling, animated authentication canvas, sidebar, dashboard cards, charts, tables, buttons, inputs, badges, avatars, progress, floating dock, and motion primitives come from `C:\SIH\tenet-source`. Domain screens have been adapted to Insomnia. Older optional visual components remain available in `src/components/ui`.
 
 No Tenet credentials, Firebase configuration, backend functions, financial data, hosting identity, Git metadata, or environment files were copied. The source project is unchanged.
 
@@ -58,7 +58,7 @@ Official knowledge and licensing snapshots were reviewed on November 1, 2026. So
 
 New workspaces start empty. Optional sample companies are loaded only through Settings; existing workspace data migrates forward. Dashboard figures derive from actual stored rows, and weekly activity derives from event and saved-report timestamps. No fixed chart series is used.
 
-Changes persist in this browser under a separate ProofPlan key, with synchronization across tabs. Backup/restore validates IDs, relationships, dates, tests, measurements and saved-report shapes. Settings includes explicit reset and sample-data controls. Recorded measurements are user-provided, never independently verified. There are no placeholder OAuth buttons or account creation. Role selection changes the workspace perspective, not security permissions.
+Changes persist in this browser under a separate Insomnia key, with synchronization across tabs. Backup/restore validates IDs, relationships, dates, tests, measurements and saved-report shapes. Settings includes explicit reset and sample-data controls. Recorded measurements are user-provided, never independently verified. There are no placeholder OAuth buttons or account creation. Role selection changes the workspace perspective, not security permissions.
 
 The business case assumes constant USD cash costs and does not infer taxes, inflation, discount rates, workload capacity, productivity gains, or vendor discounts. Custom and Business Critical licenses require an entered quote.
 

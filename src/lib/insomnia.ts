@@ -14,7 +14,7 @@ export function seed():State{
  {id:`${e.id}-correctness`,evaluationId:e.id,name:'Report correctness',criterion:'Reconcile results against the approved source dataset.',owner:e.owner,status:'Proposed',result:''},
  {id:`${e.id}-latency`,evaluationId:e.id,name:'Critical report latency',criterion:'Measure each critical report at buyer-agreed concurrency and target.',owner:e.owner,status:'Proposed',result:''},
  {id:`${e.id}-infrastructure`,evaluationId:e.id,name:'Infrastructure readiness',criterion:'Confirm Kubernetes, object storage, PostgreSQL, and an operating owner.',owner:'Unassigned',status:'Proposed',result:''},
- ]),events:[{id:'initial',action:'Illustrative evaluations loaded. No performance results have been measured.',date:'2026-11-01T08:00:00+05:30'}],settings:{workspace:'ProofPlan demo workspace',reminderDays:7}};
+ ]),events:[{id:'initial',action:'Illustrative evaluations loaded. No performance results have been measured.',date:'2026-11-01T08:00:00+05:30'}],settings:{workspace:'Insomnia demo workspace',reminderDays:7}};
 }
 export function blockers(state:State,now=new Date()){
  const items=state.tests.filter(t=>t.status!=='Passed').map(t=>({id:t.id,evaluationId:t.evaluationId,title:t.name,detail:t.status==='Failed'?t.result:t.owner==='Unassigned'?'Assign an owner before evaluation.':'A proposed test still needs measurement or confirmation.'}));

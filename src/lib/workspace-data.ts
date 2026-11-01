@@ -1,6 +1,19 @@
-import {seed,type State} from './proofplan.ts';
+import {seed,type State} from './insomnia.ts';
 import {knowledge} from './knowledge.ts';
 export function emptyWorkspace():State{return {version:1,evaluations:[],tests:[],workloads:[],events:[],artifacts:[],measurements:[],sample:false,settings:{workspace:'My IOMETE workspace',reminderDays:7}};}
+export const workspaceStorageKey='insomnia-workspace-v1';
+// Compatibility only: retain access to data saved before the product rename.
+const legacyStorageKey='proofplan-workspace-v1';
+export function readStoredWorkspace(storage:Pick<Storage,'getItem'|'setItem'>):State{
+ const current=storage.getItem(workspaceStorageKey);
+ if(current)return validateWorkspace(JSON.parse(current));
+ const legacy=storage.getItem(legacyStorageKey);
+ if(!legacy)return emptyWorkspace();
+ const state=validateWorkspace(JSON.parse(legacy));
+ if(state.settings.workspace==='ProofPlan demo workspace')state.settings.workspace='Insomnia demo workspace';
+ try{storage.setItem(workspaceStorageKey,JSON.stringify(state));}catch{/* Keep recovered data usable if storage is full. */}
+ return state;
+}
 const text=(v:unknown)=>typeof v==='string'&&v.length<=100000;
 const num=(v:unknown)=>typeof v==='number'&&Number.isFinite(v)&&v>=0;
 const validDate=(v:unknown)=>text(v)&&Number.isFinite(Date.parse(v as string));
