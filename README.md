@@ -78,6 +78,8 @@ The app is a working account-based evaluation and sales workspace. It does not c
 
 ## Server configuration
 
+For local sign-in, run `npm run dev` and open `http://127.0.0.1:5181/portal/#auth`. Keep that terminal running. Standalone Vite development and preview servers also proxy `/api` to the full-stack server (using `INSOMNIA_PORT` when configured); restart an older preview process after updating its configuration. Opening HTML through VS Code Live Server does not start the backend. The client rejects HTML API responses and offers connection recovery without clearing your form.
+
 Copy `.env.example` to `.env` to override the port, host, database path, or expected origin. By default the server listens only on the local computer. For remote hosting, configure HTTPS and secure cookies, preserve the database on a durable volume, and keep backups. This is a single-server SQLite application; production operations and multi-server database coordination need separate deployment work.
 
 The API caps requests at 5 MB and saved workspace data at 4 MB; archive or delete older reports and samples when needed. CSV imports are bounded, and the most recent 2,000 workspace events are included in snapshots. The database audit is stored separately.
