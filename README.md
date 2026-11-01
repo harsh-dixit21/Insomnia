@@ -2,6 +2,8 @@
 
 IOMETE evaluation workspace using the exact landing-page composition, animated video, TechText lettering, authentication artwork, dashboard shell, primitives, and chart styling imported from the SIH-1 Tenet project.
 
+The hero's **Documentation** button opens the [product and technical PDF](public/docs/insomnia-documentation.pdf). It covers every current tool, workflow, backend behavior, setup, strengths and unfinished integrations. The guide describes implementation evidence rather than claiming an independently proven market ranking. Regenerate with `python scripts/generate-documentation.py` using a Python environment with ReportLab installed; the PDF is already bundled for normal app use.
+
 ## Run
 
 Use Node.js 24.11+ (the backend uses Node's built-in SQLite support):

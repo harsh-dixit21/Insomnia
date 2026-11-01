@@ -3,6 +3,8 @@ dist/
 .reference/
 .vite/
 .taste-skill/
+tmp/
+output/
 .data/
 *.sqlite
 *.sqlite-shm

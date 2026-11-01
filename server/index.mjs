@@ -4,7 +4,7 @@ import {stat} from 'node:fs/promises';import {createReadStream} from 'node:fs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const dev=process.argv.includes('--dev'),port=Number(process.env.INSOMNIA_PORT||5181),host=process.env.INSOMNIA_HOST||'127.0.0.1';
 let vite;
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.mp4':'video/mp4','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.pdf':'application/pdf','.mp4':'video/mp4','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 async function frontend(req,res){
  let publicPath;try{publicPath=decodeURIComponent(new URL(req.url,'http://localhost').pathname);}catch{res.writeHead(400);return res.end('Invalid path.');}
  if(/(?:^|[/\\])(?:\.data|\.reference|\.git|\.env(?:\.[^/\\]*)?|server)(?:[/\\]|$)|\.sqlite(?:-[^/\\]*)?$/i.test(publicPath)){res.writeHead(404);return res.end('Not found.');}
