@@ -5,7 +5,7 @@ export class ApiError extends Error{
 export async function readApiResponse<T>(response:Response):Promise<T>{
  const contentType=response.headers.get('content-type')||'';
  if(!/application\/(?:[a-z0-9.+-]*\+)?json\b/i.test(contentType)){
-  throw new ApiError(503,'This address is not connected to the sign-in service. Open the full-stack app at http://127.0.0.1:5181/ and retry.');
+  throw new ApiError(503,'This address is not connected to the Insomnia API. Run npm run dev, open the exact URL printed in that terminal, and retry.');
  }
  let data:unknown;
  try{data=await response.json();}catch{throw new ApiError(502,'The server returned an incomplete response. Please retry.');}

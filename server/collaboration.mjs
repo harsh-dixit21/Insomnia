@@ -25,6 +25,7 @@ export function createCollaboration(ctx){
    const invitation=db.prepare('SELECT * FROM workspace_invites WHERE token_hash=? AND expires_at>?').get(hash(body.token),Date.now());
    if(!invitation||invitation.email!==session.email||invitation.owner_id===session.id)fail(400,'Invitation is invalid, expired, or belongs to another email.');
    db.exec('BEGIN IMMEDIATE');try{db.prepare('INSERT INTO workspace_members VALUES(?,?,?) ON CONFLICT(owner_id,user_id) DO UPDATE SET role=excluded.role').run(invitation.owner_id,session.id,invitation.role);db.prepare('DELETE FROM workspace_invites WHERE id=?').run(invitation.id);db.exec('COMMIT');}catch(error){db.exec('ROLLBACK');throw error;}
+   db.prepare('UPDATE sessions SET workspace_id=? WHERE token_hash=?').run(invitation.owner_id,session.token_hash);
    audit({...session,workspace_id:invitation.owner_id},`${session.email} accepted an invitation as ${invitation.role}.`);json(res,200,{ok:true});return true;
   }
   if(path==='/api/team/invite'&&method==='POST'){

@@ -16,16 +16,17 @@ export function readStoredWorkspace(storage:Pick<Storage,'getItem'|'setItem'>):S
 }
 const text=(v:unknown)=>typeof v==='string'&&v.length<=100000;
 const num=(v:unknown)=>typeof v==='number'&&Number.isFinite(v)&&v>=0;
-const validDate=(v:unknown)=>text(v)&&Number.isFinite(Date.parse(v as string));
+const validDate=(v:unknown)=>text(v)&&Number.isFinite(Date.parse(v as string))&&(!/^\d{4}-\d{2}-\d{2}$/.test(v as string)||new Date(v as string).toISOString().slice(0,10)===v);
 const unique=(rows:{id:string}[])=>new Set(rows.map(r=>r.id)).size===rows.length;
 export function validateWorkspace(value:unknown):State{
  if(!value||typeof value!=='object')throw new Error('Invalid workspace file.');const s=value as State;
  const arrays=[s.evaluations,s.tests,s.workloads,s.events,s.artifacts||[],s.measurements||[]];
- if(s.version!==1||!arrays.every(a=>Array.isArray(a)&&a.length<=20000&&a.every(r=>r&&text(r.id))&&unique(a)))throw new Error('Invalid workspace version, rows, or duplicate IDs.');
+ if(s.version!==1||!arrays.every(a=>Array.isArray(a)&&a.length<=20000&&a.every(r=>r&&text(r.id)&&r.id.trim())&&unique(a)))throw new Error('Invalid workspace version, rows, or duplicate IDs.');
  if(!s.settings||(!text(s.settings.workspace)||!s.settings.workspace.trim())||!Number.isInteger(s.settings.reminderDays)||s.settings.reminderDays<1||s.settings.reminderDays>90)throw new Error('Invalid workspace settings.');
  for(const e of s.evaluations)if(![e.id,e.company,e.name,e.platform,e.owner,e.requirements].every(v=>text(v)&&v.trim())||!validDate(e.deadline)||!validDate(e.created)||!['Draft','Planning','Ready for evaluation'].includes(e.status))throw new Error('Complete evaluation fields and valid dates.');
  const ids=new Set(s.evaluations.map(e=>e.id));
- for(const w of s.workloads)if(!ids.has(w.evaluationId)||!text(w.report)||!num(w.baseline)||!num(w.target)||w.target<=0||typeof w.critical!=='boolean')throw new Error('Invalid workload.');
+ const reportNames=new Set<string>();
+ for(const w of s.workloads){if(!ids.has(w.evaluationId)||!text(w.report)||!w.report.trim()||!num(w.baseline)||!num(w.target)||w.target<=0||typeof w.critical!=='boolean')throw new Error('Invalid workload.');const key=JSON.stringify([w.evaluationId,w.report.trim().toLowerCase()]);if(reportNames.has(key))throw new Error('Report names must be unique within an evaluation. Rename the duplicate report and retry.');reportNames.add(key);}
  for(const t of s.tests)if(!ids.has(t.evaluationId)||![t.name,t.criterion,t.owner,t.result].every(text)||!['Proposed','Passed','Failed'].includes(t.status)||(t.status!=='Proposed'&&!t.result.trim()))throw new Error('Invalid test or missing recorded result.');
  for(const e of s.events)if(!text(e.action)||!validDate(e.date))throw new Error('Invalid activity event.');
  for(const a of s.artifacts||[])if(!ids.has(a.evaluationId)||!['explainer','fit','deployment','business','call','demo','security','benchmark','migration'].includes(a.tool)||!validDate(a.created)||!a.inputs||!Object.values(a.inputs).every(text)||!a.result||![a.result.title,a.result.summary].every(text)||!Array.isArray(a.result.sections)||a.result.sections.length>1000||!a.result.sections.every(c=>c&&text(c.heading)&&Array.isArray(c.lines)&&c.lines.length<=2000&&c.lines.every(text))||!Array.isArray(a.result.sourceIds)||!a.result.sourceIds.every(id=>knowledge.some(f=>f.id===id)))throw new Error('Invalid saved tool report.');

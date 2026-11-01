@@ -12,5 +12,5 @@ export default function App(){
  if(route==='#forgot'||route.startsWith('#reset/')||route==='#reset-complete')return <RecoveryPage key={route} reset={route!=='#forgot'}/>;
  if(user&&route.startsWith('#invite/'))return <InviteAcceptPage/>;
  if(status==='loading')return <div role="status" className="grid min-h-screen place-items-center text-sm">Connecting to your workspace…</div>;
- return <Suspense fallback={<div role="status" className="grid min-h-screen place-items-center text-sm">Opening Insomnia…</div>}>{!user?<AuthPage/>:<Dashboard/>}</Suspense>;
+ return <Suspense fallback={<div role="status" className="grid min-h-screen place-items-center text-sm">Opening Insomnia…</div>}>{!user?<AuthPage/>:<Dashboard key={`${user.id}:${user.workspaceId||user.id}`}/>}</Suspense>;
 }

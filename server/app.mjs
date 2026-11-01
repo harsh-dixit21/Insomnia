@@ -72,6 +72,7 @@ export function createApp({dbPath=':memory:',secureCookie=false,frontend,allowed
     const csrf=startSession(res,user.id);return json(res,200,{user:account(user),csrf,...workspace(user.id)});
    }
    if(!session)fail(401,'Sign in to access your workspace.');
+   if(url.pathname!=='/api/session'&&req.headers['x-workspace-id']&&req.headers['x-workspace-id']!==session.workspace_id)fail(409,'Your active workspace changed. Refresh before making another change.');
    if(mutation&&req.headers['x-csrf-token']!==session.csrf)fail(403,'Session verification failed. Refresh and retry.');
    if(await collaboration.route(req,res,url,session))return;
    if(await services(req,res,url,session))return;
