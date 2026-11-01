@@ -1,6 +1,8 @@
-# Driftbar meadow template
+# ProofPlan — Clarity before commitment
 
-The previous ProofPlan interface has been replaced with the supplied driftbar-template.zip design. The template's branding, layout, TechText headline, meadow, cloud layers, editorial interlude, product assembly, focus timer, and closing scene are preserved.
+ProofPlan uses the supplied meadow template with copy tailored to the IOMETE evaluation workflow. The animated headline, cloud layers, editorial interlude, scroll assembly, and closing scene lead into a matching meadow footer. The Driftbar logo and product copy are removed.
+
+The example workflow introduces workload inputs, editable success criteria, and proposed tests. Download an illustrative Markdown evaluation plan from the test panel or footer; the file includes the criteria entered on the page. This is a presentation prototype, not a full assessment engine, and no benchmark results are claimed.
 
 ## Open the page
 
@@ -19,4 +21,4 @@ Run npm run check for asset and script syntax checks. Run npm run build to creat
 - scripts/check-template.mjs: asset and syntax checks.
 - IOMETE_PROOFPLAN.md: retained product research, separate from the new UI.
 
-The template is a Driftbar design study. Its note is temporary and its focus timer runs in the browser. It does not provide a downloadable macOS app. Included license notices are preserved; confirm rights to the supplied media before public distribution.
+Entered criteria are temporary and remain in the browser. Footer links point to the project proposal and official IOMETE resources. This is an independent hackCBS concept for the IOMETE track. Included license notices are preserved; confirm rights to the supplied media before public distribution.
