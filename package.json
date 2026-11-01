@@ -4,11 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
+    "dev": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs --dev",
     "build": "tsc -b && vite build",
-    "preview": "vite preview --host 127.0.0.1",
-    "test": "node --experimental-strip-types --test tests/insomnia.test.ts tests/workbench.test.ts",
-    "check:screens": "node scripts/check-screens.mjs"
+    "preview": "npm start",
+    "test": "node --experimental-strip-types --test tests/insomnia.test.ts tests/workbench.test.ts tests/backend.test.mjs",
+    "check:screens": "node scripts/check-screens.mjs",
+    "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.2.8",
@@ -36,5 +37,8 @@
     "tailwindcss": "^4.1.16",
     "typescript": "~5.9.3",
     "vite": "^7.1.12"
+  },
+  "engines": {
+    "node": ">=24.11.0"
   }
 }

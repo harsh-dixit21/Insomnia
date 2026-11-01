@@ -5,7 +5,7 @@ import {renderToString} from 'react-dom/server';
 // Server-side component smoke check; no browser, effects, or network requests.
 globalThis.location={hash:'#dashboard'};
 globalThis.document={hidden:false};
-const server=await createServer({server:{middlewareMode:true}});
+const server=await createServer({server:{middlewareMode:true,hmr:false,ws:false}});
 try {
  const {WorkspaceProvider}=await server.ssrLoadModule('/src/components/workspace/store.tsx');
  const {default:Dashboard}=await server.ssrLoadModule('/src/components/ui/app-1.tsx');
@@ -15,12 +15,12 @@ try {
  const sample=seed();
  sample.artifacts.push({id:'screen-report',evaluationId:sample.evaluations[0].id,tool:'fit',inputs:{oracle:'true'},created:new Date().toISOString(),result:runTool('fit',{oracle:'true'},sample,sample.evaluations[0].id)});
  globalThis.localStorage={getItem:()=>JSON.stringify(sample)};
- const auth=renderToString(React.createElement(WorkspaceProvider,null,React.createElement(AuthPage)));
+ const auth=renderToString(React.createElement(WorkspaceProvider,{initialState:sample},React.createElement(AuthPage)));
  assert.ok(auth.includes('Your Insomnia workspace'));
  const routes=['dashboard','evaluations','new','workloads','requirements','tests','evidence','companies','reports','activity','settings','blockers','evaluation/EVAL-001','explainer','fit','deployment','business','call','demo','security','benchmark','migration','saved'];
  for(const route of routes){
   location.hash='#'+route;
-  const html=renderToString(React.createElement(WorkspaceProvider,null,React.createElement(Dashboard)));
+  const html=renderToString(React.createElement(WorkspaceProvider,{initialState:sample},React.createElement(Dashboard)));
   assert.ok(html.includes('Insomnia'),`${route} must show its product identity`);
   assert.ok(!html.includes('FDR-'),`${route} must not contain old financial records`);
  }

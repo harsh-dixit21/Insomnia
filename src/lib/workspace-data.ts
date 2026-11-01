@@ -1,4 +1,4 @@
-import {seed,type State} from './insomnia.ts';
+import {seed,blockers,readiness,type State} from './insomnia.ts';
 import {knowledge} from './knowledge.ts';
 export function emptyWorkspace():State{return {version:1,evaluations:[],tests:[],workloads:[],events:[],artifacts:[],measurements:[],sample:false,settings:{workspace:'My IOMETE workspace',reminderDays:7}};}
 export const workspaceStorageKey='insomnia-workspace-v1';
@@ -36,6 +36,8 @@ export function planningActivity(state:State,weeks=8,now=new Date()){
  const today=new Date(now);today.setHours(0,0,0,0);
  return Array.from({length:weeks},(_,i)=>{const start=new Date(today);start.setDate(today.getDate()-(weeks-1-i)*7-6);const end=new Date(start);end.setDate(start.getDate()+7);const inRange=(date:string)=>{const t=Date.parse(date);return t>=+start&&t<+end;};return {week:start.toLocaleDateString('en-GB',{day:'numeric',month:'short'}),opened:state.events.filter(e=>inRange(e.date)).length,completed:state.artifacts.filter(a=>inRange(a.created)).length};});
 }
+export function dashboardInsights(state:State){return {alerts:blockers(state),activity:planningActivity(state),readiness:Object.fromEntries(state.evaluations.map(e=>[e.id,readiness(state,e.id)])),counts:{evaluations:state.evaluations.length,proposed:state.tests.filter(t=>t.status==='Proposed').length,unassigned:state.tests.filter(t=>!t.owner||t.owner==='Unassigned').length}};}
+export type DashboardInsights=ReturnType<typeof dashboardInsights>;
 export function createEvaluation(state:State,fields:{company:string;name:string;platform:string;owner:string;deadline:string;requirements:string},id:string){
  if(![fields.company,fields.name,fields.platform,fields.owner,fields.requirements].every(v=>text(v)&&v.trim())||!validDate(fields.deadline))throw new Error('Complete all evaluation fields and a valid target date.');
  if(state.evaluations.some(e=>e.id===id))throw new Error('Duplicate evaluation ID.');

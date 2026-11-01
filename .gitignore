@@ -3,6 +3,10 @@ dist/
 .reference/
 .vite/
 .taste-skill/
+.data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 *.tsbuildinfo
 .env*
 !.env.example
