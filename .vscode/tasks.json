@@ -2,14 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Start ProofPlan",
+      "label": "Start Driftbar template",
       "type": "npm",
       "script": "dev",
       "problemMatcher": [],
       "presentation": { "reveal": "always", "panel": "dedicated" }
     },
     {
-      "label": "Check and build ProofPlan",
+      "label": "Check and build Driftbar template",
       "type": "npm",
       "script": "build",
       "group": { "kind": "build", "isDefault": true },

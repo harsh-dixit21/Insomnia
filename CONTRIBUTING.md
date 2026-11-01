@@ -1,35 +1,11 @@
-# Running and contributing to ProofPlan
+# Working on the template
 
-## Local setup
+Open index.html in a modern browser or VS Code Live Server. Alternatively, run npm ci and npm run dev, then use Vite's printed Local URL.
 
-Use Node.js 22.12 or newer and npm. Open the repository folder in VS Code, then run:
+VS Code's Terminal > Run Task menu includes a development-server task. Terminal > Run Build Task checks and builds the page.
 
-```sh
-npm ci
-npm run dev
-```
+Run npm run check after changing asset paths or scripts, and npm run build before sharing the production output. Static checks do not execute browser effects.
 
-Open Vite's printed Local URL. If the default port is occupied, Vite selects another port, so use the terminal's current URL.
+Review at desktop and mobile widths. Check the interactive headline, meadow pause button, cloud layers, scroll assembly, temporary note, focus timer, closing link, keyboard navigation, and reduced-motion layout.
 
-VS Code also provides **Terminal → Run Task → Start ProofPlan**. Use **Terminal → Run Build Task** to check and build the application.
-
-## Checking a change
-
-```sh
-npm run check
-npm run build
-npm run preview
-```
-
-The render check verifies the hero content, supplied text component, scene wrapper, and error recovery. It does not execute browser effects or validate WebGL output.
-
-Before submitting visual changes, review the first hero, cloud transition, and second hero at desktop and phone widths. Check keyboard focus, the plan dialog, Markdown export, pause control, and the operating system's reduced-motion preference.
-
-## Troubleshooting
-
-- **Startup instructions stay visible:** Use Vite's URL. Opening the source HTML directly or using Live Server does not compile the JSX modules.
-- **Recovery screen appears:** Reload once, then inspect the browser console for the specific error.
-- **Meadow media does not load:** The supplied video, poster, and Google Font need network access. Verify their requests in browser developer tools.
-- **Port already in use:** Open the alternative URL printed by Vite, or stop your previous development server.
-
-Keep proposed evaluation tests labeled as proposals. Never present simulated benchmark results as measured customer evidence.
+Keep asset license notices with distributed files. The original product research remains in IOMETE_PROOFPLAN.md for future work.

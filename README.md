@@ -1,49 +1,22 @@
-# Insomnia
+# Driftbar meadow template
 
-HackCBS IOMETE track project research and planning.
+The previous ProofPlan interface has been replaced with the supplied driftbar-template.zip design. The template's branding, layout, TechText headline, meadow, cloud layers, editorial interlude, product assembly, focus timer, and closing scene are preserved.
 
-Read the [IOMETE ProofPlan proposal](IOMETE_PROOFPLAN.md) for the recommended problem, product workflow, MVP scope, demo, and research sources.
+## Open the page
 
-## Meadow hero prototype
+Open index.html directly in a modern browser, or use VS Code Live Server. All fonts, artwork, video, and scripts are local in driftbar-assets/; no React compilation or CDN access is needed.
 
-A React implementation of the supplied Driftbar meadow reference, adapted into two full-screen ProofPlan hero scenes.
+For development with Vite, run npm ci, then npm run dev. Open the Local URL printed in the terminal. The port may change if another server is running.
 
-```sh
-npm install
-npm run dev
-```
+## Check and build
 
-Open the Local URL printed by Vite (normally `http://127.0.0.1:5173/`). In VS Code, use the integrated terminal to run this command. The source `index.html` loads JSX modules and must be served by Vite; opening it directly or through the Live Server extension does not compile React.
+Run npm run check for asset and script syntax checks. Run npm run build to create dist/, then npm run preview to serve it. Static checks do not verify browser effects or visual layout.
 
-`npm run check` renders both heroes and the supplied components to catch runtime JSX errors. The production build runs this check first.
+## Files
 
-Production build and preview:
+- index.html: supplied template page, styling, and interaction setup.
+- driftbar-assets/: bundled media, fonts, GSAP, ScrollTrigger, TechText, and license notices.
+- scripts/check-template.mjs: asset and syntax checks.
+- IOMETE_PROOFPLAN.md: retained product research, separate from the new UI.
 
-```sh
-npm run build
-npm run preview -- --port 4173
-```
-
-### Included
-
-- Supplied meadow video and poster, pale paper haze, and oversized frosted wordmark.
-- The supplied React Bits TechText component, including letter outlines, dragging, and click response.
-- GSAP ScrollTrigger timeline coordinating the hero exit, rising cloud curtain, camera movement, and second hero reveal.
-- Three.js WebGL rendering with displaced terrain, fireflies, camera parallax, and a procedural cloud shader.
-- Ambient-motion pause control, reduced-motion layout, keyboard focus styles, and a responsive mobile composition.
-- A small example-plan dialog with a working Markdown download. This is a presentation prototype, not the full evaluation engine described in the proposal.
-
-### Implementation
-
-- `src/App.jsx`: hero composition, GSAP choreography, and example-plan interaction.
-- `src/MeadowScene.jsx`: WebGL landscape and cloud rendering, loaded separately from the main interface.
-- `src/TechText.jsx` and `src/TechText.css`: component supplied in the design attachment.
-- `src/style.css`: responsive layout and visual treatment.
-
-Official guidance used: [GSAP skills](https://github.com/greensock/gsap-skills), specifically React lifecycle cleanup, timelines, ScrollTrigger, and performance. The downloaded reference checkout is ignored by Git.
-
-The remote video, poster, and Google Font require network access. Confirm rights to the supplied media and component before public distribution.
-
-### Verification
-
-The production build passes. Automated visual/browser review was unavailable because the browser security gate denied access to the local preview. Desktop, mobile, reduced-motion rendering, and cloud timing still need visual review. The generic design linter flags the requested glass gradients, small section introductions, and the supplied component's internal monospace labels; these are intentional reference-specific choices rather than a clean generic-linter result.
+The template is a Driftbar design study. Its note is temporary and its focus timer runs in the browser. It does not provide a downloadable macOS app. Included license notices are preserved; confirm rights to the supplied media before public distribution.
