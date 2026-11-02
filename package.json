@@ -9,6 +9,7 @@
     "preview": "npm start",
     "test": "node --experimental-strip-types --test tests/insomnia.test.ts tests/workbench.test.ts tests/backend.test.mjs tests/login.test.ts tests/login-routing.test.mjs tests/services.test.mjs tests/startup.test.mjs tests/frontend.test.mjs tests/gateway.test.mjs",
     "check:screens": "node scripts/check-screens.mjs",
+    "check:cloud": "node scripts/check-cloud.mjs",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs",
     "check:production": "node --experimental-strip-types scripts/check-production.mjs",
     "backup": "node --env-file-if-exists=.env --experimental-strip-types scripts/backup.mjs"
