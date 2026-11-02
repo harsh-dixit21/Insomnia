@@ -8,6 +8,8 @@ The hero's **Documentation** button opens the [product and technical PDF](public
 
 New users can follow the [quick-start guide](docs/quick-start.md) for cloud signup, local setup, and troubleshooting. Run `npm run check:cloud` to check the public deployment without modifying data.
 
+The [feature availability guide](docs/feature-availability.md) lists which workflows run on the Vercel-native backend and which currently require the local full-stack backend or external provider configuration.
+
 For Vercel with a durable backend, follow [the hosting guide](docs/deployment.md). The included Render blueprint requires paid persistent hosting; Vercel alone does not run the SQLite database or your desktop's Ollama model.
 
 Use Node.js 24.11+ (the backend uses Node's built-in SQLite support):

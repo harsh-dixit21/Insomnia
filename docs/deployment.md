@@ -6,7 +6,7 @@ The production project now connects to Neon PostgreSQL on its Free plan. When `D
 
 Local SQLite accounts are not automatically copied to this database. Register a cloud account separately. The remaining tool, team, recovery, export, and external integration routes have not been migrated to this cloud handler and return an explicit unsupported-feature error. The existing SQLite backend still supports those routes locally. The separate backend configuration below is optional and is not used by the current production authentication deployment.
 
-The Vercel site serves the landing page, portal, and updated 14-page PDF at `/docs/insomnia-documentation.pdf`. Its `/api/*` gateway forwards requests to a separate Node backend. Accounts, sessions, team membership, and evaluations stay in that backend's persistent SQLite database. The gateway preserves cookies, CSRF headers, workspace scope, downloads, and SSO redirects.
+The Vercel site serves the landing page, portal, and updated 14-page PDF at `/docs/insomnia-documentation.pdf`. If `INSOMNIA_BACKEND_URL` is configured, its `/api/*` gateway instead forwards requests to a separate Node backend with persistent SQLite storage. This optional proxy preserves cookies, CSRF headers, workspace scope, downloads, and SSO redirects. See the [availability guide](feature-availability.md) for differences between the two backend modes.
 
 ## Backend setup
 
