@@ -1,0 +1,16 @@
+{
+  "tool": "migration",
+  "scenario": "Identify hierarchical queries and write semantics for manual review.",
+  "inputs": {
+    "sql": "UPDATE sample_nodes SET flag = 1 WHERE id IN (SELECT id FROM sample_nodes CONNECT BY PRIOR id = parent_id)",
+    "cdc": "Yes",
+    "reconcile": "No"
+  },
+  "expectedText": [
+    "2 SQL review flags",
+    "Hierarchical CONNECT BY logic",
+    "Review write semantics",
+    "Reconciliation confirmed: No"
+  ],
+  "limits": "The SQL is inspected as text."
+}
