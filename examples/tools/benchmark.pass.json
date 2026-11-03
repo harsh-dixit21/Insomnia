@@ -1,0 +1,14 @@
+{
+  "tool": "benchmark",
+  "scenario": "Meet both latency targets with correct samples at the required concurrency.",
+  "inputs": {
+    "concurrency": "10",
+    "samples": "2"
+  },
+  "expectedText": [
+    "2/2 reports meet the supplied checks",
+    "Critical customer lookup [critical]: Passed"
+  ],
+  "limits": "Uses fictional timing data.",
+  "measurementsCsv": "report,seconds,concurrency,correct\nDaily portfolio summary,3,10,true\nDaily portfolio summary,4,10,true\nCritical customer lookup,1,10,true\nCritical customer lookup,1.5,10,true"
+}
