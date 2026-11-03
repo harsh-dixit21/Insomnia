@@ -1,0 +1,21 @@
+{
+  "tool": "business",
+  "scenario": "Model a proposal with higher operating costs.",
+  "inputs": {
+    "plan": "Custom quote",
+    "vcpu": "100",
+    "quote": "120000",
+    "current": "8000",
+    "infrastructure": "3000",
+    "operations": "2000",
+    "support": "1000",
+    "migration": "10000",
+    "overlap": "1",
+    "years": "1"
+  },
+  "expectedText": [
+    "do not produce a cost saving",
+    "none at this monthly cost difference"
+  ],
+  "limits": "Costs are fictional USD assumptions."
+}
