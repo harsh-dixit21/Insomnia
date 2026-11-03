@@ -1,0 +1,7 @@
+{
+  "tool": "fit",
+  "scenario": "Detect a transactional workload conflict even when analytical and sovereignty needs match.",
+  "inputs": {"sovereign": "true", "analytics": "true", "oracle": "true", "open": "true", "governance": "true", "oltp": "true", "managed": "false"},
+  "expectedText": ["Resolve the stated workload", "Transactional point lookups"],
+  "limits": "Matching needs do not override a hard workload conflict or certify product suitability."
+}
