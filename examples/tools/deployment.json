@@ -1,0 +1,7 @@
+{
+  "tool": "deployment",
+  "scenario": "Expose missing PostgreSQL and an unconfirmed offline delivery process in an air-gapped installation plan.",
+  "inputs": {"environment": "Air-gapped", "kubernetes": "Yes", "storage": "Yes", "postgres": "No", "ingress": "Unknown", "servicesCpu": "12", "servicesRam": "24", "sparkCpu": "4", "sparkRam": "32", "owner": "Example platform team", "airgap": "Unknown"},
+  "expectedText": ["1 gaps; 2 unknowns", "not production readiness"],
+  "limits": "Infrastructure values are illustrative inputs, not inspected capacity or current sizing recommendations."
+}
