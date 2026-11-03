@@ -1,0 +1,22 @@
+{
+  "tool": "deployment",
+  "scenario": "Spot undersized service capacity with confirmed infrastructure.",
+  "inputs": {
+    "environment": "Private cloud",
+    "kubernetes": "Yes",
+    "storage": "Yes",
+    "postgres": "Yes",
+    "ingress": "Yes",
+    "servicesCpu": "8",
+    "servicesRam": "16",
+    "sparkCpu": "4",
+    "sparkRam": "32",
+    "owner": "Platform team",
+    "airgap": "Unknown"
+  },
+  "expectedText": [
+    "2 gaps; 0 unknowns",
+    "documented floor 12"
+  ],
+  "limits": "Uses the installation floors embedded in the engine."
+}
