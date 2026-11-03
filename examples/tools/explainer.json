@@ -1,0 +1,7 @@
+{
+  "tool": "explainer",
+  "scenario": "Explain open table formats to a data engineer using the curated source snapshot.",
+  "inputs": {"question": "How does Apache Iceberg support open table formats?", "role": "Data engineer"},
+  "expectedText": ["Validate representative queries"],
+  "limits": "Runs curated evidence retrieval; it does not invoke Ollama or browse live documentation."
+}
