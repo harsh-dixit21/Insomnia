@@ -1,0 +1,7 @@
+{
+  "tool": "security",
+  "scenario": "Keep an unsupported buyer-specific compliance guarantee unresolved instead of generating an assurance.",
+  "inputs": {"questions": "Does the platform support Apache Iceberg?\nCan you guarantee that our deployment satisfies every regulatory requirement in every country?"},
+  "expectedText": ["2 questions", "Unknown", "require human review"],
+  "limits": "Responses are review drafts. A documented platform capability does not establish a customer's compliance."
+}
