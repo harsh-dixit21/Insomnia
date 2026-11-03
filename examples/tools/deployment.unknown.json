@@ -1,0 +1,16 @@
+{
+  "tool": "deployment",
+  "scenario": "Review a hybrid deployment with unconfirmed prerequisites.",
+  "inputs": {
+    "environment": "Hybrid",
+    "kubernetes": "Unknown",
+    "storage": "Unknown",
+    "postgres": "Unknown",
+    "ingress": "Unknown",
+    "airgap": "Unknown"
+  },
+  "expectedText": [
+    "0 gaps; 9 unknowns"
+  ],
+  "limits": "Missing inputs require follow-up with the buyer."
+}
