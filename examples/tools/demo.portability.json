@@ -1,0 +1,14 @@
+{
+  "tool": "demo",
+  "scenario": "Plan a retail demo around independent access to open tables.",
+  "inputs": {
+    "industry": "Retail",
+    "focus": "Data portability",
+    "minutes": "25"
+  },
+  "expectedText": [
+    "Inventory availability reporting",
+    "compatible independent tool"
+  ],
+  "limits": "Generates a plan using synthetic records."
+}
