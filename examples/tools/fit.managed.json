@@ -1,0 +1,12 @@
+{
+  "tool": "fit",
+  "scenario": "Surface a fully managed SaaS requirement.",
+  "inputs": {
+    "managed": "true",
+    "analytics": "true"
+  },
+  "expectedText": [
+    "Fully vendor-operated SaaS is a deployment-model mismatch"
+  ],
+  "limits": "Reflects the offering described in the bundled snapshot."
+}
