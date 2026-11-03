@@ -1,0 +1,21 @@
+{
+  "tool": "business",
+  "scenario": "Model a proposal whose transition costs consume its first-year savings.",
+  "inputs": {
+    "plan": "Custom quote",
+    "vcpu": "100",
+    "quote": "120000",
+    "current": "15000",
+    "infrastructure": "2000",
+    "operations": "1000",
+    "support": "1000",
+    "migration": "12000",
+    "overlap": "0",
+    "years": "1"
+  },
+  "expectedText": [
+    "Modeled savings: $0.00",
+    "12.0 months"
+  ],
+  "limits": "Illustrates simple payback with fictional costs."
+}
