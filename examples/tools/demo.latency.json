@@ -1,0 +1,14 @@
+{
+  "tool": "demo",
+  "scenario": "Plan a banking demo around measured performance and correctness.",
+  "inputs": {
+    "industry": "Banking",
+    "focus": "Reporting latency",
+    "minutes": "30"
+  },
+  "expectedText": [
+    "Portfolio risk reporting",
+    "compare correctness to a baseline"
+  ],
+  "limits": "Latency must be measured during the demo."
+}
