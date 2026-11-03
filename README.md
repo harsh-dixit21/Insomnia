@@ -10,6 +10,8 @@ New users can follow the [quick-start guide](docs/quick-start.md) for cloud sign
 
 The [feature availability guide](docs/feature-availability.md) lists which workflows run on the Vercel-native backend and which currently require the local full-stack backend or external provider configuration.
 
+Explore [runnable examples for all nine tools](examples/README.md) with `npm run check:examples`. Each example records its assumptions and expected output without contacting external services.
+
 For Vercel with a durable backend, follow [the hosting guide](docs/deployment.md). The included Render blueprint requires paid persistent hosting; Vercel alone does not run the SQLite database or your desktop's Ollama model.
 
 Use Node.js 24.11+ (the backend uses Node's built-in SQLite support):
