@@ -1,0 +1,15 @@
+{
+  "tool": "call",
+  "scenario": "Prepare a short security call around evidence ownership.",
+  "inputs": {
+    "stakeholder": "Security lead",
+    "minutes": "15",
+    "goal": "Identify the owner of access-control evidence",
+    "facts": "The fictional buyer separates analyst and administrator access."
+  },
+  "expectedText": [
+    "15-minute agenda",
+    "No external company facts have been verified"
+  ],
+  "limits": "The buyer statement is fictional."
+}
