@@ -1,0 +1,12 @@
+{
+  "tool": "security",
+  "scenario": "Retrieve a documentation draft for a narrow access-control question.",
+  "inputs": {
+    "questions": "Does IOMETE support row-level access control?"
+  },
+  "expectedText": [
+    "Documentation draft",
+    "0 unknown"
+  ],
+  "limits": "The draft describes a public capability. Review its applicability separately."
+}
