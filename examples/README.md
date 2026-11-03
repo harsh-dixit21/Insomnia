@@ -9,7 +9,7 @@ npm ci
 npm run check:examples
 ```
 
-To print the complete result for one example:
+To print complete results for all cases of a single tool:
 
 ```sh
 npm run check:examples -- business
@@ -33,3 +33,17 @@ Each JSON file contains the tool ID, a scenario, form-compatible string inputs, 
 You can copy the inputs into the corresponding local workbench forms. The JSON files are developer examples, not workspace backups; do not upload them through Restore. In the current Vercel-native backend, tool execution routes have not been migrated. See [feature availability](../docs/feature-availability.md).
 
 For a complete manual exercise, follow the [sample evaluation walkthrough](../docs/sample-evaluation.md).
+
+Each tool also has two named variations using the `tool.case.json` naming convention. The benchmark variations import fictional measurements through the same CSV parser used by the workbench. Run `npm run check:examples -- benchmark` to compare missing evidence, a passing run, and a correctness failure below the latency target.
+
+| Tool | Additional cases |
+| --- | --- |
+| Product explanation | [Unsupported question](tools/explainer.unsupported.json), [finance audience](tools/explainer.finance.json) |
+| Use-case assessment | [Analytics shortlist](tools/fit.analytics.json), [managed-service requirement](tools/fit.managed.json) |
+| Deployment readiness | [Unconfirmed inputs](tools/deployment.unknown.json), [capacity below installation floors](tools/deployment.floor.json) |
+| Business case | [Higher costs](tools/business.loss.json), [first-year break-even](tools/business.break-even.json) |
+| Call preparation | [Engineering acceptance criteria](tools/call.engineering.json), [security evidence ownership](tools/call.security.json) |
+| Demo planning | [Retail portability](tools/demo.portability.json), [banking latency](tools/demo.latency.json) |
+| Security review | [Compound question](tools/security.compound.json), [documented capability](tools/security.capability.json) |
+| Benchmark review | [Passing measurements](tools/benchmark.pass.json), [correctness failure](tools/benchmark.correctness.json) |
+| Migration review | [Keywords in comments and strings](tools/migration.comments.json), [hierarchy and writes](tools/migration.hierarchy.json) |
