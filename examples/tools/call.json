@@ -1,0 +1,7 @@
+{
+  "tool": "call",
+  "scenario": "Prepare a finance discussion without inventing external company research.",
+  "inputs": {"stakeholder": "Finance lead", "minutes": "30", "goal": "Agree a pilot budget and identify who will approve the cost assumptions", "facts": "Synthetic scenario: the buyer needs to separate migration costs from the ongoing run rate."},
+  "expectedText": ["30-minute agenda", "No external company facts have been verified"],
+  "limits": "Uses the sample evaluation and supplied fictional context; no research provider is called."
+}
