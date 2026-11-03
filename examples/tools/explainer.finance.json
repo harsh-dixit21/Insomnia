@@ -1,0 +1,12 @@
+{
+  "tool": "explainer",
+  "scenario": "Explain Iceberg to a finance stakeholder.",
+  "inputs": {
+    "question": "What is Apache Iceberg?",
+    "role": "Finance lead"
+  },
+  "expectedText": [
+    "Separate license, infrastructure, operations"
+  ],
+  "limits": "Provides a finance lens on a retrieved topic."
+}
