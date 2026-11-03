@@ -1,0 +1,12 @@
+{
+  "tool": "explainer",
+  "scenario": "Show how retrieval handles an unrelated question.",
+  "inputs": {
+    "question": "Does it predict rainfall?",
+    "role": "Buyer"
+  },
+  "expectedText": [
+    "No supported topic found"
+  ],
+  "limits": "Uses a fixed documentation snapshot."
+}
