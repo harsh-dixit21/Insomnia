@@ -1,0 +1,7 @@
+{
+  "tool": "demo",
+  "scenario": "Prepare a manufacturing governance demo with synthetic records and explicit permission checks.",
+  "inputs": {"industry": "Manufacturing", "focus": "Data governance", "minutes": "20"},
+  "expectedText": ["plant_id", "Test authorized and restricted access", "never claim an unexecuted demo succeeded"],
+  "limits": "Generates a runbook, not an executed demo or proof that access controls are configured correctly."
+}
