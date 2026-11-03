@@ -1,0 +1,14 @@
+{
+  "tool": "call",
+  "scenario": "Plan a technical call to agree on acceptance criteria.",
+  "inputs": {
+    "stakeholder": "Data engineer",
+    "minutes": "45",
+    "goal": "Agree the sample reports, concurrency target, and reconciliation owner"
+  },
+  "expectedText": [
+    "45-minute agenda",
+    "reconciliation owner"
+  ],
+  "limits": "Uses the sample workspace and supplied goal."
+}
