@@ -1,0 +1,7 @@
+{
+  "tool": "business",
+  "scenario": "Model a three-year comparison using an illustrative buyer-provided license quote and explicit transition costs.",
+  "inputs": {"plan": "Custom quote", "vcpu": "100", "quote": "120000", "current": "30000", "infrastructure": "4000", "operations": "5000", "support": "1000", "migration": "20000", "overlap": "2", "years": "3"},
+  "expectedText": ["Modeled savings", "Buyer-provided quote", "Parallel-run cost is added explicitly"],
+  "limits": "All amounts are synthetic USD assumptions; the quote is not an actual IOMETE offer or a guaranteed saving."
+}
