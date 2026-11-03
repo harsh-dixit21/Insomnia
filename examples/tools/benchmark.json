@@ -1,0 +1,7 @@
+{
+  "tool": "benchmark",
+  "scenario": "Show that a sample report inventory cannot pass a benchmark without recorded measurements.",
+  "inputs": {"concurrency": "10", "samples": "20"},
+  "expectedText": ["critical report(s) lack passing evidence", "Insufficient evidence", "eligible samples 0"],
+  "limits": "Intentionally supplies no measurements. No live IOMETE query is executed or timed."
+}
