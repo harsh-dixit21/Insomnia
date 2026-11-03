@@ -1,0 +1,14 @@
+{
+  "tool": "migration",
+  "scenario": "Ignore Oracle keywords in comments and quoted strings.",
+  "inputs": {
+    "sql": "-- ROWNUM\nSELECT 'NVL(x, 0)' AS label FROM example_table",
+    "cdc": "Unknown",
+    "reconcile": "Unknown"
+  },
+  "expectedText": [
+    "0 SQL review flags",
+    "execute correctness tests on the target engine"
+  ],
+  "limits": "The SQL is illustrative."
+}
