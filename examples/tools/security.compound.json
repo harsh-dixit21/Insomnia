@@ -1,0 +1,12 @@
+{
+  "tool": "security",
+  "scenario": "Flag a compound question for separate review.",
+  "inputs": {
+    "questions": "Does the platform support Iceberg and Kubernetes?"
+  },
+  "expectedText": [
+    "Split compound questions",
+    "1 unknown"
+  ],
+  "limits": "Each claim needs separate evidence."
+}
