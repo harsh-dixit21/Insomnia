@@ -1,0 +1,13 @@
+{
+  "tool": "fit",
+  "scenario": "Shortlist analytics on open tables.",
+  "inputs": {
+    "analytics": "true",
+    "open": "true"
+  },
+  "expectedText": [
+    "Potential evaluation use cases found",
+    "Choose one representative workload"
+  ],
+  "limits": "A pilot must confirm workload fit."
+}
