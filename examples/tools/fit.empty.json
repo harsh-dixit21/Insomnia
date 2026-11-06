@@ -1,0 +1,10 @@
+{
+  "tool": "fit",
+  "scenario": "Request clarification when no needs are selected.",
+  "inputs": {},
+  "expectedText": [
+    "Select at least one need",
+    "Clarify the conflicting or missing requirements"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
