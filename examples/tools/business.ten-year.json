@@ -1,0 +1,21 @@
+{
+  "tool": "business",
+  "scenario": "Evaluate the supported ten-year horizon.",
+  "inputs": {
+    "plan": "Custom quote",
+    "vcpu": "10",
+    "quote": "12000",
+    "current": "5000",
+    "infrastructure": "1000",
+    "operations": "1000",
+    "support": "0",
+    "migration": "0",
+    "overlap": "0",
+    "years": "10"
+  },
+  "expectedText": [
+    "10-year business case",
+    "Modeled savings: $240,000.00"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
