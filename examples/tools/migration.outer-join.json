@@ -1,0 +1,14 @@
+{
+  "tool": "migration",
+  "scenario": "Flag Oracle outer-join syntax.",
+  "inputs": {
+    "sql": "SELECT a.id FROM sample_accounts a, sample_balances b WHERE a.id = b.account_id(+)",
+    "cdc": "Yes",
+    "reconcile": "Unknown"
+  },
+  "expectedText": [
+    "1 SQL review flags",
+    "Review Oracle outer-join syntax"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
