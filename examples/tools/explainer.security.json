@@ -1,0 +1,12 @@
+{
+  "tool": "explainer",
+  "scenario": "Explain open tables with a security review lens.",
+  "inputs": {
+    "question": "What is Apache Iceberg?",
+    "role": "Security lead"
+  },
+  "expectedText": [
+    "Separate product capabilities from configuration"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
