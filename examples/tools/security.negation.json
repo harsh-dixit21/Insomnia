@@ -1,0 +1,12 @@
+{
+  "tool": "security",
+  "scenario": "Keep a negative capability claim unresolved.",
+  "inputs": {
+    "questions": "Does the platform operate without access control?"
+  },
+  "expectedText": [
+    "1 unknown",
+    "Requires specific assurance"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
