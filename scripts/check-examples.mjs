@@ -15,9 +15,11 @@ for (const tool of toolDefinitions) {
   assert.ok(files.includes(`${tool.id}.json`), `Missing base example for ${tool.id}`);
 }
 let failures = 0;
+let checked = 0;
 for (const filename of files) {
   const toolId = filename.split('.')[0];
   if (selected && toolId !== selected && filename !== selectedFile) continue;
+  checked++;
   try {
     const example = JSON.parse(await readFile(new URL(filename, directory), 'utf8'));
     const definition = toolDefinitions.find(tool => tool.id === toolId);
@@ -64,5 +66,6 @@ for (const filename of files) {
     console.error(`FAIL ${filename}: ${error.message}`);
   }
 }
+console.log(`${checked - failures}/${checked} examples passed.`);
 console.log('Examples use synthetic local fixtures; no accounts, providers, clusters, or cloud workspaces are modified.');
 if (failures) process.exitCode = 1;
