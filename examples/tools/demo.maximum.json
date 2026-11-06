@@ -1,0 +1,15 @@
+{
+  "tool": "demo",
+  "scenario": "Plan a longer manufacturing portability demonstration.",
+  "inputs": {
+    "industry": "Manufacturing",
+    "focus": "Data portability",
+    "minutes": "90"
+  },
+  "expectedText": [
+    "90-minute demo",
+    "open table metadata",
+    "compatible independent tool"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
