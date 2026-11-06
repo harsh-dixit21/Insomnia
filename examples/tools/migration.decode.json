@@ -1,0 +1,14 @@
+{
+  "tool": "migration",
+  "scenario": "Flag Oracle DECODE for semantic review.",
+  "inputs": {
+    "sql": "SELECT DECODE(status, 'A', 1, 0) FROM sample_accounts",
+    "cdc": "Unknown",
+    "reconcile": "Unknown"
+  },
+  "expectedText": [
+    "1 SQL review flags",
+    "Review DECODE semantics"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
