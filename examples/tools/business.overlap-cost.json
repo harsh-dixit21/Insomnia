@@ -1,0 +1,21 @@
+{
+  "tool": "business",
+  "scenario": "Include a full year of parallel operation.",
+  "inputs": {
+    "plan": "Custom quote",
+    "vcpu": "10",
+    "quote": "12000",
+    "current": "5000",
+    "infrastructure": "1000",
+    "operations": "1000",
+    "support": "0",
+    "migration": "0",
+    "overlap": "12",
+    "years": "1"
+  },
+  "expectedText": [
+    "Modeled savings: -$36,000.00",
+    "30.0 months"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
