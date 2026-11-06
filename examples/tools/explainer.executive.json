@@ -1,0 +1,12 @@
+{
+  "tool": "explainer",
+  "scenario": "Explain open tables for an executive decision.",
+  "inputs": {
+    "question": "How does Apache Iceberg support open tables?",
+    "role": "Executive"
+  },
+  "expectedText": [
+    "Translate the capability into a measurable decision"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
