@@ -1,0 +1,14 @@
+{
+  "tool": "call",
+  "scenario": "Prepare an agenda at the minimum supported duration.",
+  "inputs": {
+    "stakeholder": "Data engineer",
+    "minutes": "10",
+    "goal": "Assign the reconciliation owner"
+  },
+  "expectedText": [
+    "10-minute agenda",
+    "Assign the reconciliation owner"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
