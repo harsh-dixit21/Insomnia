@@ -1,0 +1,16 @@
+{
+  "tool": "call",
+  "scenario": "Preserve an explicitly buyer-supplied source reference.",
+  "inputs": {
+    "stakeholder": "Finance lead",
+    "minutes": "120",
+    "goal": "Review the evidence and budget assumptions",
+    "facts": "Fictional buyer input for demonstration.",
+    "factSource": "https://example.invalid/buyer-brief"
+  },
+  "expectedText": [
+    "120-minute agenda",
+    "Buyer-supplied reference (not automatically verified)"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
