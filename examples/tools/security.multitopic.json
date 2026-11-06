@@ -1,0 +1,12 @@
+{
+  "tool": "security",
+  "scenario": "Split a question spanning multiple documentation topics.",
+  "inputs": {
+    "questions": "Does Kubernetes provide row-level masking?"
+  },
+  "expectedText": [
+    "1 unknown",
+    "Several documentation topics match"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
