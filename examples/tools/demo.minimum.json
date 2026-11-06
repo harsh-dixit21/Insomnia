@@ -1,0 +1,15 @@
+{
+  "tool": "demo",
+  "scenario": "Plan a compact retail reporting demonstration.",
+  "inputs": {
+    "industry": "Retail",
+    "focus": "Reporting latency",
+    "minutes": "10"
+  },
+  "expectedText": [
+    "10-minute demo",
+    "store_id",
+    "Measure individual query latency"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
