@@ -6,17 +6,18 @@ import {importMeasurements, runTool, toolDefinitions} from '../src/lib/workbench
 
 const directory = new URL('../examples/tools/', import.meta.url);
 const selected = process.argv[2];
-if (selected && !toolDefinitions.some(tool => tool.id === selected)) {
-  throw new Error(`Unknown tool. Choose: ${toolDefinitions.map(tool => tool.id).join(', ')}`);
-}
 const files = (await readdir(directory)).filter(file => file.endsWith('.json')).sort();
+const selectedFile = selected?.endsWith('.json') ? selected : `${selected}.json`;
+if (selected && !toolDefinitions.some(tool => tool.id === selected) && !files.includes(selectedFile)) {
+  throw new Error(`Unknown tool or example. Choose a tool (${toolDefinitions.map(tool => tool.id).join(', ')}) or an example filename.`);
+}
 for (const tool of toolDefinitions) {
   assert.ok(files.includes(`${tool.id}.json`), `Missing base example for ${tool.id}`);
 }
 let failures = 0;
 for (const filename of files) {
   const toolId = filename.split('.')[0];
-  if (selected && toolId !== selected) continue;
+  if (selected && toolId !== selected && filename !== selectedFile) continue;
   try {
     const example = JSON.parse(await readFile(new URL(filename, directory), 'utf8'));
     const definition = toolDefinitions.find(tool => tool.id === toolId);
