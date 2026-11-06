@@ -1,0 +1,22 @@
+{
+  "tool": "deployment",
+  "scenario": "Identify an unagreed offline update process.",
+  "inputs": {
+    "environment": "Air-gapped",
+    "kubernetes": "Yes",
+    "storage": "Yes",
+    "postgres": "Yes",
+    "ingress": "Yes",
+    "servicesCpu": "12",
+    "servicesRam": "24",
+    "sparkCpu": "4",
+    "sparkRam": "32",
+    "owner": "Example infrastructure owner",
+    "airgap": "No"
+  },
+  "expectedText": [
+    "1 gaps; 0 unknowns",
+    "Offline delivery process — Gap"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
