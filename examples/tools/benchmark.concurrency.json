@@ -1,0 +1,14 @@
+{
+  "tool": "benchmark",
+  "scenario": "Exclude timings below the required concurrency.",
+  "inputs": {
+    "concurrency": "10",
+    "samples": "2"
+  },
+  "expectedText": [
+    "eligible samples 0",
+    "Insufficient evidence"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment.",
+  "measurementsCsv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,1,true\nDaily portfolio summary,2,1,true\nCritical customer lookup,0.5,1,true\nCritical customer lookup,0.8,1,true"
+}
