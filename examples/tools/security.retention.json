@@ -1,0 +1,12 @@
+{
+  "tool": "security",
+  "scenario": "Escalate customer-specific retention requirements.",
+  "inputs": {
+    "questions": "What is our required data retention period?"
+  },
+  "expectedText": [
+    "1 unknown",
+    "Requires specific assurance"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
