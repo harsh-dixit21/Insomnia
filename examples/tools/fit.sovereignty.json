@@ -1,0 +1,12 @@
+{
+  "tool": "fit",
+  "scenario": "Identify customer-controlled infrastructure as an evaluation need.",
+  "inputs": {
+    "sovereign": "true"
+  },
+  "expectedText": [
+    "Customer-controlled infrastructure is required",
+    "Choose one representative workload"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
