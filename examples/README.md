@@ -34,6 +34,27 @@ You can copy the inputs into the corresponding local workbench forms. The JSON f
 
 For a complete manual exercise, follow the [sample evaluation walkthrough](../docs/sample-evaluation.md).
 
+Run one named scenario by passing its name or JSON filename. A bare tool name runs every case for that tool. The final line reports how many selected examples passed.
+
+```sh
+npm run check:examples -- benchmark.concurrency
+npm run check:examples -- business.break-even.json
+```
+
+The suite includes 54 scenarios. The following additions exercise missing inputs, boundary values, and review gates.
+
+| Tool | Additional scenarios |
+| --- | --- |
+| Product guide | [executive](tools/explainer.executive.json), [security](tools/explainer.security.json), [buyer](tools/explainer.buyer.json) |
+| Use-case assessment | [empty](tools/fit.empty.json), [governance](tools/fit.governance.json), [sovereignty](tools/fit.sovereignty.json) |
+| Deployment readiness | [missing-owner](tools/deployment.missing-owner.json), [storage-gap](tools/deployment.storage-gap.json), [offline-gap](tools/deployment.offline-gap.json) |
+| Business case | [no-transition](tools/business.no-transition.json), [ten-year](tools/business.ten-year.json), [overlap-cost](tools/business.overlap-cost.json) |
+| Call preparation | [minimum](tools/call.minimum.json), [executive](tools/call.executive.json), [reference](tools/call.reference.json) |
+| Demo planning | [healthcare](tools/demo.healthcare.json), [minimum](tools/demo.minimum.json), [maximum](tools/demo.maximum.json) |
+| Security review | [retention](tools/security.retention.json), [negation](tools/security.negation.json), [multitopic](tools/security.multitopic.json) |
+| Benchmark review | [concurrency](tools/benchmark.concurrency.json), [latency](tools/benchmark.latency.json), [sample-count](tools/benchmark.sample-count.json) |
+| Migration review | [decode](tools/migration.decode.json), [outer-join](tools/migration.outer-join.json), [merge](tools/migration.merge.json) |
+
 Each tool also has two named variations using the `tool.case.json` naming convention. The benchmark variations import fictional measurements through the same CSV parser used by the workbench. Run `npm run check:examples -- benchmark` to compare missing evidence, a passing run, and a correctness failure below the latency target.
 
 | Tool | Additional cases |
