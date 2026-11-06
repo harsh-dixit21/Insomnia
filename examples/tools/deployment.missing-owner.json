@@ -1,0 +1,21 @@
+{
+  "tool": "deployment",
+  "scenario": "Keep operating ownership unresolved despite supplied prerequisites.",
+  "inputs": {
+    "environment": "On premises",
+    "kubernetes": "Yes",
+    "storage": "Yes",
+    "postgres": "Yes",
+    "ingress": "Yes",
+    "servicesCpu": "12",
+    "servicesRam": "24",
+    "sparkCpu": "4",
+    "sparkRam": "32",
+    "airgap": "Unknown"
+  },
+  "expectedText": [
+    "0 gaps; 1 unknowns",
+    "Assign infrastructure operations responsibility"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
