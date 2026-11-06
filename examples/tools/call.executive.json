@@ -1,0 +1,14 @@
+{
+  "tool": "call",
+  "scenario": "Prepare an executive adoption decision.",
+  "inputs": {
+    "stakeholder": "Executive",
+    "minutes": "60",
+    "goal": "Agree adoption gates and the accountable sponsor"
+  },
+  "expectedText": [
+    "60-minute agenda",
+    "accountable sponsor"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
