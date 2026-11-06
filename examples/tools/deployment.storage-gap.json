@@ -1,0 +1,22 @@
+{
+  "tool": "deployment",
+  "scenario": "Identify absent object storage.",
+  "inputs": {
+    "environment": "Public cloud",
+    "kubernetes": "Yes",
+    "storage": "No",
+    "postgres": "Yes",
+    "ingress": "Yes",
+    "servicesCpu": "12",
+    "servicesRam": "24",
+    "sparkCpu": "4",
+    "sparkRam": "32",
+    "owner": "Example infrastructure owner",
+    "airgap": "Unknown"
+  },
+  "expectedText": [
+    "1 gaps; 0 unknowns",
+    "Object storage — Gap"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
