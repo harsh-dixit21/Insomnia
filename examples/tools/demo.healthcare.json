@@ -1,0 +1,15 @@
+{
+  "tool": "demo",
+  "scenario": "Plan a synthetic healthcare capacity demonstration.",
+  "inputs": {
+    "industry": "Healthcare",
+    "focus": "Reporting latency",
+    "minutes": "20"
+  },
+  "expectedText": [
+    "Synthetic capacity reporting",
+    "available_beds",
+    "No customer or patient data is required"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
