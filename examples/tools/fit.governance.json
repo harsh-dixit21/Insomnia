@@ -1,0 +1,12 @@
+{
+  "tool": "fit",
+  "scenario": "Shortlist representative permission testing.",
+  "inputs": {
+    "governance": "true"
+  },
+  "expectedText": [
+    "Access controls need representative permission tests",
+    "Potential evaluation use cases"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
