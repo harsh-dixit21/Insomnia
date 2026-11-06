@@ -1,0 +1,12 @@
+{
+  "tool": "explainer",
+  "scenario": "Explain open tables with buyer acceptance criteria.",
+  "inputs": {
+    "question": "What are open table formats?",
+    "role": "Buyer"
+  },
+  "expectedText": [
+    "Agree what success looks like"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
