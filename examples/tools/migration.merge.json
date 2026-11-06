@@ -1,0 +1,15 @@
+{
+  "tool": "migration",
+  "scenario": "Flag write semantics in a MERGE statement.",
+  "inputs": {
+    "sql": "MERGE INTO sample_target t USING sample_source s ON t.id = s.id WHEN MATCHED THEN UPDATE SET t.amount = s.amount",
+    "cdc": "Yes",
+    "reconcile": "Yes"
+  },
+  "expectedText": [
+    "1 SQL review flags",
+    "Review write semantics",
+    "Reconciliation confirmed: Yes"
+  ],
+  "limits": "Synthetic local example using the bundled evaluation engine and documentation snapshot. Review outputs before applying them to a real deployment."
+}
