@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject fractional vcpu in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "vcpu": "1.5"
+  },
+  "expectedError": "vCPUs and years must be whole numbers."
+}
