@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject fractional concurrency in benchmark.",
+  "operation": "tool",
+  "tool": "benchmark",
+  "inputs": {
+    "concurrency": "1.5"
+  },
+  "expectedError": "Concurrency and minimum samples must be positive whole numbers."
+}
