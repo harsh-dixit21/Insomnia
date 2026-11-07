@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid role in explainer.",
+  "operation": "tool",
+  "tool": "explainer",
+  "inputs": {
+    "role": "Unrecognized audience"
+  },
+  "expectedError": "Choose a valid option."
+}
