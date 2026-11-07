@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject missing quote in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "quote": ""
+  },
+  "expectedError": "quote: enter a number"
+}
