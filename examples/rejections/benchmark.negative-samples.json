@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject negative samples in benchmark.",
+  "operation": "tool",
+  "tool": "benchmark",
+  "inputs": {
+    "samples": "-1"
+  },
+  "expectedError": "samples: enter a number"
+}
