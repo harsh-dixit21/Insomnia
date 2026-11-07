@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject negative duration in measurement import.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,-1,10,true",
+  "expectedError": "nonnegative seconds"
+}
