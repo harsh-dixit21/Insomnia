@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject nonfinite infrastructure in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "infrastructure": "NaN"
+  },
+  "expectedError": "infrastructure: enter a number"
+}
