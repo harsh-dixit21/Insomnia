@@ -1,0 +1,10 @@
+{
+  "scenario": "Reject excessive overlap in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "years": "1",
+    "overlap": "13"
+  },
+  "expectedError": "Parallel-operation months cannot exceed the comparison horizon."
+}
