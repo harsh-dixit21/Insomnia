@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid environment in deployment.",
+  "operation": "tool",
+  "tool": "deployment",
+  "inputs": {
+    "environment": "Unrecognized platform"
+  },
+  "expectedError": "Choose a valid option."
+}
