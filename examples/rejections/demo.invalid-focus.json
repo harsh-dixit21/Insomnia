@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid focus in demo.",
+  "operation": "tool",
+  "tool": "demo",
+  "inputs": {
+    "focus": "Unrecognized focus"
+  },
+  "expectedError": "Choose a valid option."
+}
