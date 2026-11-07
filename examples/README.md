@@ -1,5 +1,7 @@
 # Runnable evaluation examples
 
+The [invalid-input suite](rejections/README.md) complements these examples with 27 rejection scenarios. Run it with `npm run check:rejections` to verify the existing engine and measurement-import validation messages.
+
 These examples exercise all nine local evaluation engines with fictional inputs and a fresh sample workspace. They do not connect to IOMETE, call Ollama, send email, or modify the public deployment.
 
 Use Node.js 24.11 or a newer Node 24 release, then run:
