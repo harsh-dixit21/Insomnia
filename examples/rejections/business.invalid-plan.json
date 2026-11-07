@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid plan in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "plan": "Unrecognized plan"
+  },
+  "expectedError": "Choose a valid option."
+}
