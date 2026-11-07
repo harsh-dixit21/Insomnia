@@ -14,5 +14,9 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+      - name: Check evaluation examples
+        run: npm run check:examples
+      - name: Check invalid-input rejection
+        run: npm run check:rejections
       - run: npm run check:screens
       - run: npm run check:production
