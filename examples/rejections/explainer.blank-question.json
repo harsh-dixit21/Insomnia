@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject blank question in explainer.",
+  "operation": "tool",
+  "tool": "explainer",
+  "inputs": {
+    "question": "   "
+  },
+  "expectedError": "Question is required."
+}
