@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject negative current cost in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "current": "-1"
+  },
+  "expectedError": "current: enter a number"
+}
