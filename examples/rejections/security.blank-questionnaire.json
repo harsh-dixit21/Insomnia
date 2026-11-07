@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject blank questionnaire in security.",
+  "operation": "tool",
+  "tool": "security",
+  "inputs": {
+    "questions": " "
+  },
+  "expectedError": "Questions is required."
+}
