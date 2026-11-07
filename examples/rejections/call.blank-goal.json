@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject blank goal in call.",
+  "operation": "tool",
+  "tool": "call",
+  "inputs": {
+    "goal": " "
+  },
+  "expectedError": "Call goal is required."
+}
