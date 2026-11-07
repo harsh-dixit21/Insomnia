@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject invalid header in measurement import.",
+  "operation": "measurements",
+  "csv": "report,time,concurrency,correct\nDaily portfolio summary,1,10,true",
+  "expectedError": "Use headers: report,seconds,concurrency,correct"
+}
