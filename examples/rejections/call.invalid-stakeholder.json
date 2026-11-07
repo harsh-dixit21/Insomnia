@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid stakeholder in call.",
+  "operation": "tool",
+  "tool": "call",
+  "inputs": {
+    "stakeholder": "Unrecognized role"
+  },
+  "expectedError": "Choose a valid option."
+}
