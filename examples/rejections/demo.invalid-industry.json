@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid industry in demo.",
+  "operation": "tool",
+  "tool": "demo",
+  "inputs": {
+    "industry": "Unrecognized industry"
+  },
+  "expectedError": "Choose a valid option."
+}
