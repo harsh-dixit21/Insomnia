@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid source url in call.",
+  "operation": "tool",
+  "tool": "call",
+  "inputs": {
+    "factSource": "javascript:alert(1)"
+  },
+  "expectedError": "Use an http(s) source URL."
+}
