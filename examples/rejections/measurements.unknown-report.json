@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject unknown report in measurement import.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nMissing report,1,10,true",
+  "expectedError": "use a unique existing report name"
+}
