@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject negative cpu in deployment.",
+  "operation": "tool",
+  "tool": "deployment",
+  "inputs": {
+    "servicesCpu": "-1"
+  },
+  "expectedError": "servicesCpu: enter a number"
+}
