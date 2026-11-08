@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject negative spark cpu in deployment.",
+  "operation": "tool",
+  "tool": "deployment",
+  "inputs": {
+    "sparkCpu": "-1"
+  },
+  "expectedError": "sparkCpu: enter a number"
+}
