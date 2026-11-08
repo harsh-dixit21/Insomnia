@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject empty data in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\n",
+  "expectedError": "Import between 1 and 10,000 measurements."
+}
