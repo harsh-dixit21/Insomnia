@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject report case mismatch in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDAILY PORTFOLIO SUMMARY,1,10,true",
+  "expectedError": "use a unique existing report name"
+}
