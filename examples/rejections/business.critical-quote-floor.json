@@ -1,0 +1,10 @@
+{
+  "scenario": "Reject critical quote floor in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "plan": "Business Critical quote",
+    "quote": "100000"
+  },
+  "expectedError": "Business Critical public minimum"
+}
