@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject negative service memory in deployment.",
+  "operation": "tool",
+  "tool": "deployment",
+  "inputs": {
+    "servicesRam": "-1"
+  },
+  "expectedError": "servicesRam: enter a number"
+}
