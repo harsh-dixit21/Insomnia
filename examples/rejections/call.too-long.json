@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject too long in call.",
+  "operation": "tool",
+  "tool": "call",
+  "inputs": {
+    "minutes": "121"
+  },
+  "expectedError": "minutes: enter a number between 10 and 120."
+}
