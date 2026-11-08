@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject zero vcpu in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "vcpu": "0"
+  },
+  "expectedError": "vcpu: enter a number"
+}
