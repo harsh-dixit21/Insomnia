@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject overlap too long in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "overlap": "61"
+  },
+  "expectedError": "overlap: enter a number"
+}
