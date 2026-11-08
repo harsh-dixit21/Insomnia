@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject zero horizon in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "years": "0"
+  },
+  "expectedError": "years: enter a number"
+}
