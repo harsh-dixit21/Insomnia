@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid kubernetes answer in deployment.",
+  "operation": "tool",
+  "tool": "deployment",
+  "inputs": {
+    "kubernetes": "Maybe"
+  },
+  "expectedError": "Choose a valid option."
+}
