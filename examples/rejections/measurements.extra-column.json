@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject extra column in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,10,true,extra",
+  "expectedError": "use a unique existing report name"
+}
