@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject horizon too long in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "years": "11"
+  },
+  "expectedError": "years: enter a number"
+}
