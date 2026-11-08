@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject invalid spark memory in deployment.",
+  "operation": "tool",
+  "tool": "deployment",
+  "inputs": {
+    "sparkRam": "unavailable"
+  },
+  "expectedError": "sparkRam: enter a number"
+}
