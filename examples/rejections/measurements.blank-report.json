@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject blank report in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\n,1,10,true",
+  "expectedError": "use a unique existing report name"
+}
