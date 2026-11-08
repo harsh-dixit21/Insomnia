@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject negative concurrency in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,-2,true",
+  "expectedError": "positive whole concurrency"
+}
