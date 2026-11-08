@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject blank current cost in business.",
+  "operation": "tool",
+  "tool": "business",
+  "inputs": {
+    "current": " "
+  },
+  "expectedError": "current: enter a number"
+}
