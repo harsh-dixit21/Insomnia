@@ -4,7 +4,13 @@ import {seed} from '../src/lib/insomnia.ts';
 import {importMeasurements, runTool, toolDefinitions} from '../src/lib/workbench.ts';
 
 const directory = new URL('../examples/rejections/', import.meta.url);
-const files = (await readdir(directory)).filter(file => file.endsWith('.json')).sort();
+const available = (await readdir(directory)).filter(file => file.endsWith('.json')).sort();
+const selected = process.argv[2];
+const selectedFile = selected?.endsWith('.json') ? selected : `${selected}.json`;
+if (selected && !available.includes(selectedFile)) {
+  throw new Error('Unknown rejection example. Use an existing JSON filename or its name without .json.');
+}
+const files = selected ? [selectedFile] : available;
 assert.ok(files.length, 'Provide rejection examples before running this check');
 let failures = 0;
 for (const filename of files) {
