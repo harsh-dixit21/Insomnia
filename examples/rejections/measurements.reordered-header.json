@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject reordered header in measurements.",
+  "operation": "measurements",
+  "csv": "seconds,report,concurrency,correct\n1,Daily portfolio summary,10,true",
+  "expectedError": "Use headers: report,seconds,concurrency,correct"
+}
