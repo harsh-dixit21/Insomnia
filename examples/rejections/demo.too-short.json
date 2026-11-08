@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject too short in demo.",
+  "operation": "tool",
+  "tool": "demo",
+  "inputs": {
+    "minutes": "9"
+  },
+  "expectedError": "minutes: enter a number between 10 and 90."
+}
