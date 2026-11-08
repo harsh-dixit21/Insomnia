@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject fractional concurrency in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,1.5,true",
+  "expectedError": "positive whole concurrency"
+}
