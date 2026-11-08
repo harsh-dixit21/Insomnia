@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject blank duration in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,,10,true",
+  "expectedError": "nonnegative seconds"
+}
