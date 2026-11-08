@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject infinite duration in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,Infinity,10,true",
+  "expectedError": "nonnegative seconds"
+}
