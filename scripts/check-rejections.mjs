@@ -14,6 +14,7 @@ for (const filename of files) {
     assert.ok(typeof example.expectedError === 'string' && example.expectedError.trim(), 'Declare the expected validation error');
     assert.ok(['tool', 'measurements'].includes(example.operation), 'Unknown rejection operation');
     const state = seed();
+    const initialState = structuredClone(state);
     const evaluationId = state.evaluations[0].id;
     let execute;
     if (example.operation === 'measurements') {
@@ -29,6 +30,7 @@ for (const filename of files) {
     }
     // Match the engine's validation error so unrelated exceptions cannot pass.
     assert.throws(execute, error => error instanceof Error && error.message.includes(example.expectedError), 'Expected the declared validation error');
+    assert.deepEqual(state, initialState, 'Rejected input must preserve the workspace');
     console.log(`PASS ${filename}`);
   } catch (error) {
     failures++;
