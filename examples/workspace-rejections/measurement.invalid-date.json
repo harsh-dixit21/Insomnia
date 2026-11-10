@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an invalid measurement timestamp.",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "date": "invalid-date"
+  },
+  "expectedError": "Invalid benchmark measurement."
+}
