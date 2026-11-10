@@ -1,0 +1,18 @@
+{
+  "scenario": "Preserve punctuation in a workspace name.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "workspace": "Operations & Finance / \"Pilot\""
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "settings",
+        "workspace"
+      ],
+      "value": "Operations & Finance / \"Pilot\""
+    }
+  ]
+}
