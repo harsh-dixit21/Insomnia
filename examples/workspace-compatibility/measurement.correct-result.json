@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve a recorded correctness success.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "correct": true
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "measurements",
+        0,
+        "correct"
+      ],
+      "value": true
+    }
+  ]
+}
