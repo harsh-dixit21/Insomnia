@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a test pointing to a missing evaluation.",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "evaluationId": "missing"
+  },
+  "expectedError": "Invalid test or missing recorded result."
+}
