@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a missing source platform.",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "platform": " "
+  },
+  "expectedError": "Complete evaluation fields and valid dates."
+}
