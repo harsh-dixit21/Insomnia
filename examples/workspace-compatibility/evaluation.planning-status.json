@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept an evaluation in planning.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "status": "Planning"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "status"
+      ],
+      "value": "Planning"
+    }
+  ]
+}
