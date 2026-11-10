@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept an evaluation ready for testing.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "status": "Ready for evaluation"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "status"
+      ],
+      "value": "Ready for evaluation"
+    }
+  ]
+}
