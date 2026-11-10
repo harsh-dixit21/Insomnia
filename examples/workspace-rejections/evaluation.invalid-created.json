@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an unparseable creation date.",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "created": "invalid-date"
+  },
+  "expectedError": "Complete evaluation fields and valid dates."
+}
