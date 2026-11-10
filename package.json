@@ -12,6 +12,7 @@
     "check:cloud": "node scripts/check-cloud.mjs",
     "check:examples": "node --experimental-strip-types scripts/check-examples.mjs",
     "check:rejections": "node --experimental-strip-types scripts/check-rejections.mjs",
+    "check:workspace-rejections": "node --experimental-strip-types scripts/check-workspace-rejections.mjs",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs",
     "check:production": "node --experimental-strip-types scripts/check-production.mjs",
     "backup": "node --env-file-if-exists=.env --experimental-strip-types scripts/backup.mjs"
