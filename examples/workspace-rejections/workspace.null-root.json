@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject an empty backup root.",
+  "operation": "replace",
+  "value": null,
+  "expectedError": "Invalid workspace file."
+}
