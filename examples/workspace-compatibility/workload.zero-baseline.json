@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept a recorded zero-duration baseline.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "baseline": 0
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "workloads",
+        0,
+        "baseline"
+      ],
+      "value": 0
+    }
+  ]
+}
