@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an impossible calendar date.",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "deadline": "2026-02-30"
+  },
+  "expectedError": "Complete evaluation fields and valid dates."
+}
