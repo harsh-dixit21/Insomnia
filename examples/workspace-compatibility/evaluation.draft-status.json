@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept a draft evaluation.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "status": "Draft"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "status"
+      ],
+      "value": "Draft"
+    }
+  ]
+}
