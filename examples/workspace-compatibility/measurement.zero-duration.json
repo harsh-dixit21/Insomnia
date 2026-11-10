@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept a zero-duration recorded measurement.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "seconds": 0
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "measurements",
+        0,
+        "seconds"
+      ],
+      "value": 0
+    }
+  ]
+}
