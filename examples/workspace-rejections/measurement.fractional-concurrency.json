@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject fractional stored concurrency.",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "concurrency": 1.5
+  },
+  "expectedError": "Invalid benchmark measurement."
+}
