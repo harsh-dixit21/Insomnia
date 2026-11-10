@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve subsecond measurement precision.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "seconds": 0.125
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "measurements",
+        0,
+        "seconds"
+      ],
+      "value": 0.125
+    }
+  ]
+}
