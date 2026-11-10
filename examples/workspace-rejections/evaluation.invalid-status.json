@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an unsupported evaluation status.",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "status": "Approved"
+  },
+  "expectedError": "Complete evaluation fields and valid dates."
+}
