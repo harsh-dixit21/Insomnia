@@ -1,0 +1,18 @@
+{
+  "scenario": "Preserve a multilingual workspace name.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "workspace": "分析チーム — समीक्षा"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "settings",
+        "workspace"
+      ],
+      "value": "分析チーム — समीक्षा"
+    }
+  ]
+}
