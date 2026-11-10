@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a string in the measurement correctness flag.",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "correct": "true"
+  },
+  "expectedError": "Invalid benchmark measurement."
+}
