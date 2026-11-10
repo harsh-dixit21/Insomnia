@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve subsecond baseline precision.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "baseline": 0.125
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "workloads",
+        0,
+        "baseline"
+      ],
+      "value": 0.125
+    }
+  ]
+}
