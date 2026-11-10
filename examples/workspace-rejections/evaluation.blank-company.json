@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a missing company name.",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "company": " "
+  },
+  "expectedError": "Complete evaluation fields and valid dates."
+}
