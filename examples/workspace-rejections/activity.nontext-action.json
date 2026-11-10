@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an action that is not text.",
+  "operation": "patch",
+  "target": "events",
+  "changes": {
+    "action": 42
+  },
+  "expectedError": "Invalid activity event."
+}
