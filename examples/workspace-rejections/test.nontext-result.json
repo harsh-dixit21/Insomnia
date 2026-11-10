@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a numeric test observation.",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "result": 42
+  },
+  "expectedError": "Invalid test or missing recorded result."
+}
