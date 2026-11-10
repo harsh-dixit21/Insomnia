@@ -1,5 +1,7 @@
 # Runnable evaluation examples
 
+The [workspace validation suite](workspace-rejections/README.md) adds 37 cases for corrupted backup data, invalid relationships, and missing test evidence. Run `npm run check:workspace-rejections` to check the shared workspace validator.
+
 The [invalid-input suite](rejections/README.md) complements these examples with 54 rejection scenarios. Run it with `npm run check:rejections` to verify the engine and measurement-import validation messages and preservation of workspace data after rejection.
 
 These examples exercise all nine local evaluation engines with fictional inputs and a fresh sample workspace. They do not connect to IOMETE, call Ollama, send email, or modify the public deployment.
