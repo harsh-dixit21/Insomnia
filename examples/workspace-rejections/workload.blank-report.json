@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a blank workload name.",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "report": " "
+  },
+  "expectedError": "Invalid workload."
+}
