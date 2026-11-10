@@ -1,0 +1,28 @@
+{
+  "scenario": "Accept a passed test with recorded evidence.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "status": "Passed",
+    "result": "Synthetic observation: results reconciled against the baseline."
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "tests",
+        0,
+        "status"
+      ],
+      "value": "Passed"
+    },
+    {
+      "path": [
+        "tests",
+        0,
+        "result"
+      ],
+      "value": "Synthetic observation: results reconciled against the baseline."
+    }
+  ]
+}
