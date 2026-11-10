@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve a high measured concurrency value.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "concurrency": 1000
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "measurements",
+        0,
+        "concurrency"
+      ],
+      "value": 1000
+    }
+  ]
+}
