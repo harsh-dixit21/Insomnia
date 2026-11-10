@@ -1,0 +1,28 @@
+{
+  "scenario": "Accept a failed test with recorded evidence.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "status": "Failed",
+    "result": "Synthetic observation: row totals differ from the baseline."
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "tests",
+        0,
+        "status"
+      ],
+      "value": "Failed"
+    },
+    {
+      "path": [
+        "tests",
+        0,
+        "result"
+      ],
+      "value": "Synthetic observation: row totals differ from the baseline."
+    }
+  ]
+}
