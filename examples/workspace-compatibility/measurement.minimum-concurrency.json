@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept the minimum positive measured concurrency.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "concurrency": 1
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "measurements",
+        0,
+        "concurrency"
+      ],
+      "value": 1
+    }
+  ]
+}
