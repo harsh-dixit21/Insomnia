@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept a valid leap-day deadline.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "deadline": "2028-02-29"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "deadline"
+      ],
+      "value": "2028-02-29"
+    }
+  ]
+}
