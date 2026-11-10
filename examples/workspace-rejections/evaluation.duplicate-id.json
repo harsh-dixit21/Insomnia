@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject duplicate evaluation identifiers.",
+  "operation": "duplicate",
+  "target": "evaluations",
+  "expectedError": "Invalid workspace version, rows, or duplicate IDs."
+}
