@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a zero-day reminder interval.",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "reminderDays": 0
+  },
+  "expectedError": "Invalid workspace settings."
+}
