@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve a creation timestamp with an explicit offset.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "created": "2026-11-01T17:30:00+05:30"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "created"
+      ],
+      "value": "2026-11-01T17:30:00+05:30"
+    }
+  ]
+}
