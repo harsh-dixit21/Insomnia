@@ -1,0 +1,30 @@
+{
+  "scenario": "Recover all supported omitted legacy fields together.",
+  "base": "seed",
+  "operation": "omit",
+  "fields": [
+    "artifacts",
+    "measurements",
+    "sample"
+  ],
+  "expectedValues": [
+    {
+      "path": [
+        "artifacts"
+      ],
+      "value": []
+    },
+    {
+      "path": [
+        "measurements"
+      ],
+      "value": []
+    },
+    {
+      "path": [
+        "sample"
+      ],
+      "value": true
+    }
+  ]
+}
