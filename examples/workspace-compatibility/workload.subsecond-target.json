@@ -1,0 +1,19 @@
+{
+  "scenario": "Accept a positive subsecond workload target.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "target": 0.001
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "workloads",
+        0,
+        "target"
+      ],
+      "value": 0.001
+    }
+  ]
+}
