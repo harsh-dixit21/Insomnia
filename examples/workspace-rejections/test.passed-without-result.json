@@ -1,0 +1,10 @@
+{
+  "scenario": "Require recorded evidence for a passed test.",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "status": "Passed",
+    "result": " "
+  },
+  "expectedError": "Invalid test or missing recorded result."
+}
