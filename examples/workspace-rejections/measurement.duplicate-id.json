@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject duplicate measurement identifiers.",
+  "operation": "duplicate",
+  "target": "measurements",
+  "expectedError": "Invalid workspace version, rows, or duplicate IDs."
+}
