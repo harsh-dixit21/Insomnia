@@ -20,5 +20,7 @@ jobs:
         run: npm run check:rejections
       - name: Check workspace backup rejection
         run: npm run check:workspace-rejections
+      - name: Check valid workspace compatibility
+        run: npm run check:workspace-compatibility
       - run: npm run check:screens
       - run: npm run check:production
