@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a zero latency target.",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "target": 0
+  },
+  "expectedError": "Invalid workload."
+}
