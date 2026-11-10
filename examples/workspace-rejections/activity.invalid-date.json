@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an invalid activity timestamp.",
+  "operation": "patch",
+  "target": "events",
+  "changes": {
+    "date": "invalid-date"
+  },
+  "expectedError": "Invalid activity event."
+}
