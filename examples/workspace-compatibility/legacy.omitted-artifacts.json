@@ -1,0 +1,16 @@
+{
+  "scenario": "Recover an older backup with no tool-report collection.",
+  "base": "seed",
+  "operation": "omit",
+  "fields": [
+    "artifacts"
+  ],
+  "expectedValues": [
+    {
+      "path": [
+        "artifacts"
+      ],
+      "value": []
+    }
+  ]
+}
