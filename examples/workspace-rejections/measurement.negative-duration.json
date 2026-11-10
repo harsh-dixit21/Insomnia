@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a negative stored measurement duration.",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "seconds": -1
+  },
+  "expectedError": "Invalid benchmark measurement."
+}
