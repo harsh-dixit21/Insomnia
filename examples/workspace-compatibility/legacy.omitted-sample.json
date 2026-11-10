@@ -1,0 +1,16 @@
+{
+  "scenario": "Apply the legacy sample marker default.",
+  "base": "seed",
+  "operation": "omit",
+  "fields": [
+    "sample"
+  ],
+  "expectedValues": [
+    {
+      "path": [
+        "sample"
+      ],
+      "value": true
+    }
+  ]
+}
