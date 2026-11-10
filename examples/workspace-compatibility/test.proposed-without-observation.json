@@ -1,0 +1,28 @@
+{
+  "scenario": "Accept an unexecuted proposed test.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "status": "Proposed",
+    "result": ""
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "tests",
+        0,
+        "status"
+      ],
+      "value": "Proposed"
+    },
+    {
+      "path": [
+        "tests",
+        0,
+        "result"
+      ],
+      "value": ""
+    }
+  ]
+}
