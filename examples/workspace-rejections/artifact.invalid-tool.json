@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a report from an unknown tool.",
+  "operation": "patch",
+  "target": "artifacts",
+  "changes": {
+    "tool": "unknown"
+  },
+  "expectedError": "Invalid saved tool report."
+}
