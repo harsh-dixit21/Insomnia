@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject missing evaluation requirements.",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "requirements": " "
+  },
+  "expectedError": "Complete evaluation fields and valid dates."
+}
