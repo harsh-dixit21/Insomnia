@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an unsupported backup version.",
+  "operation": "patch",
+  "target": "workspace",
+  "changes": {
+    "version": 2
+  },
+  "expectedError": "Invalid workspace version, rows, or duplicate IDs."
+}
