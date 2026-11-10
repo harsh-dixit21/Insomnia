@@ -1,0 +1,17 @@
+{
+  "scenario": "Preserve an explicitly sample workspace.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "workspace",
+  "changes": {
+    "sample": true
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "sample"
+      ],
+      "value": true
+    }
+  ]
+}
