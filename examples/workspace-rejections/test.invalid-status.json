@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject an unsupported test status.",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "status": "Running"
+  },
+  "expectedError": "Invalid test or missing recorded result."
+}
