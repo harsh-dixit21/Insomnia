@@ -1,0 +1,16 @@
+{
+  "scenario": "Recover an older backup with no measurement collection.",
+  "base": "seed",
+  "operation": "omit",
+  "fields": [
+    "measurements"
+  ],
+  "expectedValues": [
+    {
+      "path": [
+        "measurements"
+      ],
+      "value": []
+    }
+  ]
+}
