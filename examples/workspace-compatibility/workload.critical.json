@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve a critical workload flag.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "critical": true
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "workloads",
+        0,
+        "critical"
+      ],
+      "value": true
+    }
+  ]
+}
