@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a measurement pointing to a missing workload.",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "workloadId": "missing"
+  },
+  "expectedError": "Invalid benchmark measurement."
+}
