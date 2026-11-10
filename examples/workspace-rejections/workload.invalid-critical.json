@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a string in the critical-workload flag.",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "critical": "true"
+  },
+  "expectedError": "Invalid workload."
+}
