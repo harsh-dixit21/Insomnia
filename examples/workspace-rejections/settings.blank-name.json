@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a blank workspace name.",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "workspace": " "
+  },
+  "expectedError": "Invalid workspace settings."
+}
