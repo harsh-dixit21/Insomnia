@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a measurement pointing to a missing evaluation.",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "evaluationId": "missing"
+  },
+  "expectedError": "Invalid benchmark measurement."
+}
