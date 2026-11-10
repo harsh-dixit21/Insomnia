@@ -18,5 +18,7 @@ jobs:
         run: npm run check:examples
       - name: Check invalid-input rejection
         run: npm run check:rejections
+      - name: Check workspace backup rejection
+        run: npm run check:workspace-rejections
       - run: npm run check:screens
       - run: npm run check:production
