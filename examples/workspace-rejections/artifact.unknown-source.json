@@ -1,0 +1,16 @@
+{
+  "scenario": "Reject a report referencing an unknown evidence source.",
+  "operation": "patch",
+  "target": "artifacts",
+  "changes": {
+    "result": {
+      "title": "Example",
+      "summary": "Synthetic report",
+      "sections": [],
+      "sourceIds": [
+        "unknown-source"
+      ]
+    }
+  },
+  "expectedError": "Invalid saved tool report."
+}
