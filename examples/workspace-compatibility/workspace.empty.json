@@ -1,0 +1,33 @@
+{
+  "scenario": "Accept a newly created empty workspace.",
+  "base": "empty",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {},
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations"
+      ],
+      "value": []
+    },
+    {
+      "path": [
+        "artifacts"
+      ],
+      "value": []
+    },
+    {
+      "path": [
+        "measurements"
+      ],
+      "value": []
+    },
+    {
+      "path": [
+        "sample"
+      ],
+      "value": false
+    }
+  ]
+}
