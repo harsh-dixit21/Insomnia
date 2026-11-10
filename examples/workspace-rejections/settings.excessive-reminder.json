@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject reminder intervals above ninety days.",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "reminderDays": 91
+  },
+  "expectedError": "Invalid workspace settings."
+}
