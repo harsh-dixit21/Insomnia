@@ -1,0 +1,18 @@
+{
+  "scenario": "Accept the maximum supported reminder interval.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "reminderDays": 90
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "settings",
+        "reminderDays"
+      ],
+      "value": 90
+    }
+  ]
+}
