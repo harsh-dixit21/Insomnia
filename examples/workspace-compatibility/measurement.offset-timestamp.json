@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve an offset measurement timestamp.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "measurements",
+  "changes": {
+    "date": "2026-11-01T17:30:00+05:30"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "measurements",
+        0,
+        "date"
+      ],
+      "value": "2026-11-01T17:30:00+05:30"
+    }
+  ]
+}
