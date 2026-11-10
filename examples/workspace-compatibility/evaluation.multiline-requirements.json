@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve multiline acceptance requirements.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "requirements": "Correct results at concurrency 10.\nRecord source reconciliation evidence.\nOwner reviews each exception."
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "requirements"
+      ],
+      "value": "Correct results at concurrency 10.\nRecord source reconciliation evidence.\nOwner reviews each exception."
+    }
+  ]
+}
