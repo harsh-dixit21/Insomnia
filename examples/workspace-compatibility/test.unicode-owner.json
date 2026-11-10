@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve a multilingual test owner.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "tests",
+  "changes": {
+    "owner": "समीक्षक — 技術チーム"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "tests",
+        0,
+        "owner"
+      ],
+      "value": "समीक्षक — 技術チーム"
+    }
+  ]
+}
