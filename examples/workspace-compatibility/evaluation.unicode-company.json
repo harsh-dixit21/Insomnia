@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve a multilingual company name.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "evaluations",
+  "changes": {
+    "company": "उदाहरण製造"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "evaluations",
+        0,
+        "company"
+      ],
+      "value": "उदाहरण製造"
+    }
+  ]
+}
