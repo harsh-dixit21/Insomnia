@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a negative baseline duration.",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "baseline": -1
+  },
+  "expectedError": "Invalid workload."
+}
