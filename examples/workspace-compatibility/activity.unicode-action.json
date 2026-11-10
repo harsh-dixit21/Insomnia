@@ -1,0 +1,19 @@
+{
+  "scenario": "Preserve multilingual activity text.",
+  "base": "seed",
+  "operation": "patch",
+  "target": "events",
+  "changes": {
+    "action": "要件を更新しました — आवश्यकताएँ दर्ज कीं"
+  },
+  "expectedValues": [
+    {
+      "path": [
+        "events",
+        0,
+        "action"
+      ],
+      "value": "要件を更新しました — आवश्यकताएँ दर्ज कीं"
+    }
+  ]
+}
