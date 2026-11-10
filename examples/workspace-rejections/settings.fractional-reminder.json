@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject fractional reminder days.",
+  "operation": "patch",
+  "target": "settings",
+  "changes": {
+    "reminderDays": 1.5
+  },
+  "expectedError": "Invalid workspace settings."
+}
