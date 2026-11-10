@@ -1,0 +1,9 @@
+{
+  "scenario": "Reject a workload pointing to a missing evaluation.",
+  "operation": "patch",
+  "target": "workloads",
+  "changes": {
+    "evaluationId": "missing"
+  },
+  "expectedError": "Invalid workload."
+}
