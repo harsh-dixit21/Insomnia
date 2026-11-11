@@ -1,0 +1,11 @@
+{
+  "scenario": "Keep a quoted comma inside its field.",
+  "operation": "parser",
+  "csv": "\"north,east\",active",
+  "expectedRows": [
+    [
+      "north,east",
+      "active"
+    ]
+  ]
+}
