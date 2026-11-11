@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject workload headers in the wrong order.",
+  "operation": "workloads",
+  "csv": "report,target,baseline,critical\nInventory,2,5,true",
+  "expectedError": "Use headers: report,baseline,target,critical"
+}
