@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject a missing workload name.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\n,5,2,true",
+  "expectedError": "Check row 2:"
+}
