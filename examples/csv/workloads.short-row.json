@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject a row missing its critical flag.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,5,2",
+  "expectedError": "Check row 2:"
+}
