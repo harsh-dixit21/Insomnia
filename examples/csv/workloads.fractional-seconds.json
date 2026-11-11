@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve fractional baseline and target seconds.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,0.125,0.025,false",
+  "expectedRows": [
+    {
+      "report": "Inventory",
+      "baseline": 0.125,
+      "target": 0.025,
+      "critical": false
+    }
+  ]
+}
