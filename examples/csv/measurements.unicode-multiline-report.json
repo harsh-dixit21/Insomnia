@@ -1,0 +1,20 @@
+{
+  "scenario": "Resolve a multilingual report name containing a quoted newline.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\n\"在庫\nसमीक्षा\",1,10,true",
+  "expectedRows": [
+    {
+      "workloadId": "multilingual-report",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    }
+  ],
+  "inventory": [
+    {
+      "id": "multilingual-report",
+      "report": "在庫\nसमीक्षा",
+      "evaluation": 0
+    }
+  ]
+}
