@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve an empty trailing field.",
+  "operation": "parser",
+  "csv": "report,1,",
+  "expectedRows": [
+    [
+      "report",
+      "1",
+      ""
+    ]
+  ]
+}
