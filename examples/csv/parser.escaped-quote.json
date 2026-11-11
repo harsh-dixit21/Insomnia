@@ -1,0 +1,11 @@
+{
+  "scenario": "Decode doubled quotes inside a field.",
+  "operation": "parser",
+  "csv": "\"The \"\"daily\"\" report\",1",
+  "expectedRows": [
+    [
+      "The \"daily\" report",
+      "1"
+    ]
+  ]
+}
