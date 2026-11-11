@@ -1,0 +1,13 @@
+{
+  "scenario": "Import a report name containing a comma.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\n\"Inventory, weekly\",5,2,true",
+  "expectedRows": [
+    {
+      "report": "Inventory, weekly",
+      "baseline": 5,
+      "target": 2,
+      "critical": true
+    }
+  ]
+}
