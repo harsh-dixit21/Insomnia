@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve an empty leading field.",
+  "operation": "parser",
+  "csv": ",1,2",
+  "expectedRows": [
+    [
+      "",
+      "1",
+      "2"
+    ]
+  ]
+}
