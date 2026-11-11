@@ -1,0 +1,15 @@
+{
+  "scenario": "Ignore blank records between populated rows.",
+  "operation": "parser",
+  "csv": "a,b\n\n   \nc,d",
+  "expectedRows": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "c",
+      "d"
+    ]
+  ]
+}
