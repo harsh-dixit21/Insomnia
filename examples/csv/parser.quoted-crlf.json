@@ -1,0 +1,11 @@
+{
+  "scenario": "Preserve the embedded Windows newline in a quoted field.",
+  "operation": "parser",
+  "csv": "\"daily\r\ninventory\",2",
+  "expectedRows": [
+    [
+      "daily\r\ninventory",
+      "2"
+    ]
+  ]
+}
