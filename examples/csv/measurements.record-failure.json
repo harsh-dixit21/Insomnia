@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve an explicitly failed correctness check.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,10,false",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": false
+    }
+  ]
+}
