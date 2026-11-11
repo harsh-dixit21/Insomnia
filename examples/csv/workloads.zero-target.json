@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject a zero workload target.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,5,0,true",
+  "expectedError": "Check row 2:"
+}
