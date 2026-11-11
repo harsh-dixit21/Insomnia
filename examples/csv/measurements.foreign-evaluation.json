@@ -1,0 +1,13 @@
+{
+  "scenario": "Reject a report that exists only in another evaluation.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nRegional volume,1,10,true",
+  "expectedError": "use a unique existing report name",
+  "inventory": [
+    {
+      "id": "foreign-report",
+      "report": "Regional volume",
+      "evaluation": 1
+    }
+  ]
+}
