@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve a newline in a quoted report name.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\n\"Inventory\nweekly\",5,2,false",
+  "expectedRows": [
+    {
+      "report": "Inventory\nweekly",
+      "baseline": 5,
+      "target": 2,
+      "critical": false
+    }
+  ]
+}
