@@ -1,0 +1,6 @@
+{
+  "scenario": "Identify the invalid record after a valid workload row.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nStock,5,2,true\nOrders,5,0,false",
+  "expectedError": "Check row 3:"
+}
