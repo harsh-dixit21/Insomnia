@@ -1,0 +1,15 @@
+{
+  "scenario": "Keep the final row when the file ends without a newline.",
+  "operation": "parser",
+  "csv": "a,b\nc,d",
+  "expectedRows": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "c",
+      "d"
+    ]
+  ]
+}
