@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject a quoted field with no closing quote.",
+  "operation": "parser",
+  "csv": "\"unfinished,record",
+  "expectedError": "CSV has an unclosed quoted field."
+}
