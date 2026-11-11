@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject an invalid critical flag.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,5,2,yes",
+  "expectedError": "Check row 2:"
+}
