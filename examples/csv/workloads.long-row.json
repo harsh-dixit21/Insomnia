@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject unexpected columns in a report row.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,5,2,true,extra",
+  "expectedError": "Check row 2:"
+}
