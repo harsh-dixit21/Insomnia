@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject a missing target duration.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,5,,true",
+  "expectedError": "Check row 2:"
+}
