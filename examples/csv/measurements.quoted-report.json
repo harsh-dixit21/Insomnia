@@ -1,0 +1,20 @@
+{
+  "scenario": "Resolve a quoted report name containing a comma.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\n\"Regional volume, daily\",1,10,true",
+  "expectedRows": [
+    {
+      "workloadId": "quoted-report",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    }
+  ],
+  "inventory": [
+    {
+      "id": "quoted-report",
+      "report": "Regional volume, daily",
+      "evaluation": 0
+    }
+  ]
+}
