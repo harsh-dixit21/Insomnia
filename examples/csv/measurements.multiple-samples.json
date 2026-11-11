@@ -1,0 +1,19 @@
+{
+  "scenario": "Record independent samples for the same report.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,10,true\nDaily portfolio summary,2,20,false",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    },
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 2,
+      "concurrency": 20,
+      "correct": false
+    }
+  ]
+}
