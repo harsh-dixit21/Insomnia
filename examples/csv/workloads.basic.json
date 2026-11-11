@@ -1,0 +1,13 @@
+{
+  "scenario": "Convert a workload CSV into typed report fields.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,5,2,true",
+  "expectedRows": [
+    {
+      "report": "Inventory",
+      "baseline": 5,
+      "target": 2,
+      "critical": true
+    }
+  ]
+}
