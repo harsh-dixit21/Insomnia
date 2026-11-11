@@ -1,0 +1,20 @@
+{
+  "scenario": "Import 10000 samples at the measurement limit.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,10,true",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    },
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    }
+  ],
+  "repeat": 10000
+}
