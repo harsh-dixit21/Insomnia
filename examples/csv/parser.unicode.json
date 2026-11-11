@@ -1,0 +1,11 @@
+{
+  "scenario": "Preserve multilingual field text.",
+  "operation": "parser",
+  "csv": "\"在庫, समीक्षा\",échantillon",
+  "expectedRows": [
+    [
+      "在庫, समीक्षा",
+      "échantillon"
+    ]
+  ]
+}
