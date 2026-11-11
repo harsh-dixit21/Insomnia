@@ -1,0 +1,11 @@
+{
+  "scenario": "Keep an embedded newline inside a field.",
+  "operation": "parser",
+  "csv": "\"daily\ninventory\",2",
+  "expectedRows": [
+    [
+      "daily\ninventory",
+      "2"
+    ]
+  ]
+}
