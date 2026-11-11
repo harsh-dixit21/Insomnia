@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject an unclosed measurement report field.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\n\"Daily portfolio summary,1,10,true",
+  "expectedError": "CSV has an unclosed quoted field."
+}
