@@ -1,0 +1,15 @@
+{
+  "scenario": "Split Windows line endings.",
+  "operation": "parser",
+  "csv": "a,b\r\nc,d\r\n",
+  "expectedRows": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "c",
+      "d"
+    ]
+  ]
+}
