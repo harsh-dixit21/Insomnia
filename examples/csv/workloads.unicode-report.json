@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve multilingual report names.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\n在庫 समीक्षा,5,2,false",
+  "expectedRows": [
+    {
+      "report": "在庫 समीक्षा",
+      "baseline": 5,
+      "target": 2,
+      "critical": false
+    }
+  ]
+}
