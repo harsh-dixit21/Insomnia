@@ -14,6 +14,7 @@
     "check:rejections": "node --experimental-strip-types scripts/check-rejections.mjs",
     "check:workspace-rejections": "node --experimental-strip-types scripts/check-workspace-rejections.mjs",
     "check:workspace-compatibility": "node --experimental-strip-types scripts/check-workspace-compatibility.mjs",
+    "check:csv": "node --experimental-strip-types scripts/check-csv-examples.mjs",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs",
     "check:production": "node --experimental-strip-types scripts/check-production.mjs",
     "backup": "node --env-file-if-exists=.env --experimental-strip-types scripts/backup.mjs"
