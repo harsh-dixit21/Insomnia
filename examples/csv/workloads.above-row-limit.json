@@ -1,0 +1,7 @@
+{
+  "scenario": "Reject an inventory above 1000 report rows.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nReport {{row}},5,2,false",
+  "expectedError": "Import up to 1,000 reports at a time.",
+  "repeat": 1001
+}
