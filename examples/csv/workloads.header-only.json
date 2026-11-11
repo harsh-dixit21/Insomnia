@@ -1,0 +1,6 @@
+{
+  "scenario": "Require a report row after the workload header.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\n",
+  "expectedError": "Add at least one report row."
+}
