@@ -1,0 +1,13 @@
+{
+  "scenario": "Normalize measurement header case.",
+  "operation": "measurements",
+  "csv": " REPORT , SECONDS , CONCURRENCY , CORRECT \nDaily portfolio summary,1,10,true",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    }
+  ]
+}
