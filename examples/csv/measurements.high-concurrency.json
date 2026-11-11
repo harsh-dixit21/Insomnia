@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve a high positive concurrency value.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,1,1000,true",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 1000,
+      "correct": true
+    }
+  ]
+}
