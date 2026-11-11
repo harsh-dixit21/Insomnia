@@ -1,0 +1,6 @@
+{
+  "scenario": "Ignore whitespace-only records.",
+  "operation": "parser",
+  "csv": " \n\t\r\n",
+  "expectedRows": []
+}
