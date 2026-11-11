@@ -1,0 +1,15 @@
+{
+  "scenario": "Split carriage-return records.",
+  "operation": "parser",
+  "csv": "a,b\rc,d\r",
+  "expectedRows": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "c",
+      "d"
+    ]
+  ]
+}
