@@ -1,0 +1,13 @@
+{
+  "scenario": "Trim measurement fields and normalize boolean case.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\n Daily portfolio summary , 1 , 10 , TRUE ",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 1,
+      "concurrency": 10,
+      "correct": true
+    }
+  ]
+}
