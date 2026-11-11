@@ -1,0 +1,20 @@
+{
+  "scenario": "Import 1000 uniquely named reports at the row limit.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nReport {{row}},5,2,false",
+  "expectedRows": [
+    {
+      "report": "Report 1",
+      "baseline": 5,
+      "target": 2,
+      "critical": false
+    },
+    {
+      "report": "Report 1000",
+      "baseline": 5,
+      "target": 2,
+      "critical": false
+    }
+  ],
+  "repeat": 1000
+}
