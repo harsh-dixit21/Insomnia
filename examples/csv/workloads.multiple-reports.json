@@ -1,0 +1,19 @@
+{
+  "scenario": "Import distinct workloads in source order.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nStock,6,2,true\nOrders,5,1,false",
+  "expectedRows": [
+    {
+      "report": "Stock",
+      "baseline": 6,
+      "target": 2,
+      "critical": true
+    },
+    {
+      "report": "Orders",
+      "baseline": 5,
+      "target": 1,
+      "critical": false
+    }
+  ]
+}
