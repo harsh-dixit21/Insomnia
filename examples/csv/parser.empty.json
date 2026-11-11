@@ -1,0 +1,6 @@
+{
+  "scenario": "Parse an empty file into zero rows.",
+  "operation": "parser",
+  "csv": "",
+  "expectedRows": []
+}
