@@ -1,0 +1,13 @@
+{
+  "scenario": "Normalize header case and trim values.",
+  "operation": "workloads",
+  "csv": " REPORT , BASELINE , TARGET , CRITICAL \n Inventory , 5 , 2 , TRUE ",
+  "expectedRows": [
+    {
+      "report": "Inventory",
+      "baseline": 5,
+      "target": 2,
+      "critical": true
+    }
+  ]
+}
