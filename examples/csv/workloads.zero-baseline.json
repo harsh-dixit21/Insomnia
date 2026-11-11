@@ -1,0 +1,13 @@
+{
+  "scenario": "Accept a zero baseline with a positive target.",
+  "operation": "workloads",
+  "csv": "report,baseline,target,critical\nInventory,0,1,false",
+  "expectedRows": [
+    {
+      "report": "Inventory",
+      "baseline": 0,
+      "target": 1,
+      "critical": false
+    }
+  ]
+}
