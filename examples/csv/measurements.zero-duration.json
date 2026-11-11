@@ -1,0 +1,13 @@
+{
+  "scenario": "Accept a recorded zero duration.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,0,10,true",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 0,
+      "concurrency": 10,
+      "correct": true
+    }
+  ]
+}
