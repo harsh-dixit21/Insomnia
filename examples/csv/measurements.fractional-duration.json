@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve fractional seconds in measurements.",
+  "operation": "measurements",
+  "csv": "report,seconds,concurrency,correct\nDaily portfolio summary,0.0125,10,true",
+  "expectedRows": [
+    {
+      "workloadId": "WL-0-1",
+      "seconds": 0.0125,
+      "concurrency": 10,
+      "correct": true
+    }
+  ]
+}
