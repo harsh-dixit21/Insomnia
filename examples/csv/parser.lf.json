@@ -1,0 +1,15 @@
+{
+  "scenario": "Split Unix line endings.",
+  "operation": "parser",
+  "csv": "a,b\nc,d\n",
+  "expectedRows": [
+    [
+      "a",
+      "b"
+    ],
+    [
+      "c",
+      "d"
+    ]
+  ]
+}
