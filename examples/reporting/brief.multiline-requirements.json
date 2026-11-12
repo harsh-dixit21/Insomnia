@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve buyer requirements on multiple lines.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Reconcile source totals.\nRecord concurrency 10."
+    ]
+  },
+  "evaluation": {
+    "requirements": "Reconcile source totals.\nRecord concurrency 10."
+  }
+}
