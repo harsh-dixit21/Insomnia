@@ -1,0 +1,23 @@
+{
+  "scenario": "Clear the overdue alert after completion.",
+  "operation": "blockers",
+  "expected": {
+    "ids": []
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for latency."
+      }
+    ]
+  },
+  "evaluation": {
+    "deadline": "2026-11-09"
+  }
+}
