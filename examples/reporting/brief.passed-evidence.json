@@ -1,0 +1,23 @@
+{
+  "scenario": "Export a passed test with its buyer-provided observation.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Test latency — Passed",
+      "Recorded result (buyer-provided): Recorded passed observation"
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for latency."
+      }
+    ]
+  }
+}
