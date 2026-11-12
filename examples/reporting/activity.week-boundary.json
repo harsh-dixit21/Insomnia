@@ -1,0 +1,24 @@
+{
+  "scenario": "Count a midnight boundary event exactly once.",
+  "operation": "activity",
+  "expected": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "workspace": {
+    "events": [
+      {
+        "id": "event",
+        "action": "Recorded a synthetic observation",
+        "date": "2026-11-04T00:00:00"
+      }
+    ],
+    "artifacts": []
+  }
+}
