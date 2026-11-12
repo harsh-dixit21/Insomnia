@@ -1,0 +1,20 @@
+{
+  "scenario": "Clear the test blocker after a recorded pass.",
+  "operation": "blockers",
+  "expected": {
+    "ids": []
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for latency."
+      }
+    ]
+  }
+}
