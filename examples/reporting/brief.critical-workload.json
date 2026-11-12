@@ -1,0 +1,21 @@
+{
+  "scenario": "Export the timing targets of a critical workload.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Priority report: baseline 5s, target 2s; critical."
+    ]
+  },
+  "workspace": {
+    "workloads": [
+      {
+        "id": "priority",
+        "report": "Priority report",
+        "critical": true,
+        "evaluationId": "pilot",
+        "baseline": 5,
+        "target": 2
+      }
+    ]
+  }
+}
