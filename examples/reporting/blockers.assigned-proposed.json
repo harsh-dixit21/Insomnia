@@ -1,0 +1,25 @@
+{
+  "scenario": "Explain the evidence needed for an assigned test.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "latency"
+    ],
+    "contains": [
+      "A proposed test still needs measurement"
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  }
+}
