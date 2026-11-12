@@ -1,0 +1,24 @@
+{
+  "scenario": "Include an event on the reference day's final second.",
+  "operation": "activity",
+  "expected": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "workspace": {
+    "events": [
+      {
+        "id": "event",
+        "action": "Recorded a synthetic observation",
+        "date": "2026-11-10T23:59:59"
+      }
+    ],
+    "artifacts": []
+  }
+}
