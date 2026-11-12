@@ -1,0 +1,10 @@
+{
+  "scenario": "Include official documentation references.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "## Official documentation",
+      "https://iomete.com/"
+    ]
+  }
+}
