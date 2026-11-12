@@ -1,0 +1,25 @@
+{
+  "scenario": "Ask for an owner when a proposed test is unassigned.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "latency"
+    ],
+    "contains": [
+      "Assign an owner before evaluation."
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Unassigned",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  }
+}
