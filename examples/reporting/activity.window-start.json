@@ -1,0 +1,24 @@
+{
+  "scenario": "Include an event exactly at the window start.",
+  "operation": "activity",
+  "expected": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "workspace": {
+    "events": [
+      {
+        "id": "event",
+        "action": "Recorded a synthetic observation",
+        "date": "2026-10-28T00:00:00"
+      }
+    ],
+    "artifacts": []
+  }
+}
