@@ -1,0 +1,16 @@
+{
+  "scenario": "Respect a one-day reminder setting.",
+  "operation": "blockers",
+  "expected": {
+    "ids": []
+  },
+  "evaluation": {
+    "deadline": "2026-11-12"
+  },
+  "workspace": {
+    "settings": {
+      "workspace": "Example workspace",
+      "reminderDays": 1
+    }
+  }
+}
