@@ -1,0 +1,21 @@
+{
+  "scenario": "Export a standard workload with its recorded target.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Stock report: baseline 5s, target 2s; standard."
+    ]
+  },
+  "workspace": {
+    "workloads": [
+      {
+        "id": "standard",
+        "report": "Stock report",
+        "critical": false,
+        "evaluationId": "pilot",
+        "baseline": 5,
+        "target": 2
+      }
+    ]
+  }
+}
