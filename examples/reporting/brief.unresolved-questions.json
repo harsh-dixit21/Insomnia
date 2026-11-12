@@ -1,0 +1,10 @@
+{
+  "scenario": "Keep sizing and customer constraints visible.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "## Unknowns",
+      "Production sizing, connector fit, concurrency, plan entitlements"
+    ]
+  }
+}
