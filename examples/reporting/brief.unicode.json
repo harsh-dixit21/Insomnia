@@ -1,0 +1,25 @@
+{
+  "scenario": "Preserve multilingual names in exported Markdown.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "# 在庫 समीक्षा — IOMETE evaluation",
+      "在庫 रिपोर्ट: baseline"
+    ]
+  },
+  "evaluation": {
+    "company": "在庫 समीक्षा"
+  },
+  "workspace": {
+    "workloads": [
+      {
+        "id": "unicode",
+        "report": "在庫 रिपोर्ट",
+        "critical": false,
+        "evaluationId": "pilot",
+        "baseline": 5,
+        "target": 2
+      }
+    ]
+  }
+}
