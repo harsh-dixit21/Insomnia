@@ -1,0 +1,10 @@
+{
+  "scenario": "Exclude a target beyond the default reminder window.",
+  "operation": "blockers",
+  "expected": {
+    "ids": []
+  },
+  "evaluation": {
+    "deadline": "2026-11-18"
+  }
+}
