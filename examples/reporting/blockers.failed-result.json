@@ -1,0 +1,25 @@
+{
+  "scenario": "Show the recorded failure as the blocker detail.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "latency"
+    ],
+    "contains": [
+      "Recorded failed observation for latency."
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Failed",
+        "result": "Recorded failed observation for latency."
+      }
+    ]
+  }
+}
