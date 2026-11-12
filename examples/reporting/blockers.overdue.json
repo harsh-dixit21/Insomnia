@@ -1,0 +1,30 @@
+{
+  "scenario": "Show overdue unresolved work.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "latency",
+      "deadline-pilot"
+    ],
+    "contains": [
+      "Evaluation target overdue",
+      "1 days overdue"
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  },
+  "evaluation": {
+    "deadline": "2026-11-09"
+  }
+}
