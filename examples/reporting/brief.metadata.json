@@ -1,0 +1,13 @@
+{
+  "scenario": "Carry the selected evaluation's identifying details into the brief.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "# Example Manufacturing — IOMETE evaluation",
+      "Workload: Inventory pilot",
+      "Platform: Oracle",
+      "Owner: Pilot owner",
+      "Target date: 2026-12-01"
+    ]
+  }
+}
