@@ -1,0 +1,15 @@
+{
+  "scenario": "Keep a near-term target visible before any tests are entered.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "deadline-pilot"
+    ],
+    "contains": [
+      "Unresolved tests still need evidence"
+    ]
+  },
+  "evaluation": {
+    "deadline": "2026-11-12"
+  }
+}
