@@ -1,0 +1,8 @@
+{
+  "scenario": "Compute readiness from test outcomes even at the ready status.",
+  "operation": "readiness",
+  "expected": 0,
+  "evaluation": {
+    "status": "Ready for evaluation"
+  }
+}
