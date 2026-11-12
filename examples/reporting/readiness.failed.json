@@ -1,0 +1,27 @@
+{
+  "scenario": "Recorded failures contribute no completion.",
+  "operation": "readiness",
+  "expected": 0,
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Failed",
+        "result": "Recorded failed observation for latency."
+      },
+      {
+        "id": "reconciliation",
+        "evaluationId": "pilot",
+        "name": "Test reconciliation",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Failed",
+        "result": "Recorded failed observation for reconciliation."
+      }
+    ]
+  }
+}
