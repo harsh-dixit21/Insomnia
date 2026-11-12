@@ -1,0 +1,5 @@
+{
+  "scenario": "An evaluation with no tests starts at zero.",
+  "operation": "readiness",
+  "expected": 0
+}
