@@ -1,0 +1,49 @@
+{
+  "scenario": "Exclude a report before the activity window.",
+  "operation": "activity",
+  "expected": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "workspace": {
+    "events": [
+      {
+        "id": "event",
+        "action": "Recorded a synthetic observation",
+        "date": "2026-11-05T12:00:00"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "report",
+        "evaluationId": "pilot",
+        "tool": "migration",
+        "inputs": {
+          "sql": "SELECT 1"
+        },
+        "created": "2026-10-01T12:00:00",
+        "result": {
+          "title": "Recorded pilot review",
+          "summary": "Synthetic review summary.",
+          "sections": [
+            {
+              "heading": "Evidence",
+              "lines": [
+                "Reconciliation needs review."
+              ]
+            }
+          ],
+          "sourceIds": [
+            "open"
+          ]
+        }
+      }
+    ]
+  }
+}
