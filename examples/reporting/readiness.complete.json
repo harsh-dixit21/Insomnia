@@ -1,0 +1,27 @@
+{
+  "scenario": "All recorded tests pass.",
+  "operation": "readiness",
+  "expected": 100,
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for latency."
+      },
+      {
+        "id": "reconciliation",
+        "evaluationId": "pilot",
+        "name": "Test reconciliation",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for reconciliation."
+      }
+    ]
+  }
+}
