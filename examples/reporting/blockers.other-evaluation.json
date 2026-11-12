@@ -1,0 +1,25 @@
+{
+  "scenario": "Keep blockers for separate evaluations identifiable.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "other-latency"
+    ],
+    "contains": [
+      "Test other-latency"
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "other-latency",
+        "evaluationId": "other",
+        "name": "Test other-latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  }
+}
