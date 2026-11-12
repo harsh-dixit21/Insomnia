@@ -1,0 +1,30 @@
+{
+  "scenario": "Mark an unresolved target due today.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "latency",
+      "deadline-pilot"
+    ],
+    "contains": [
+      "Evaluation target approaching",
+      "0 days remaining"
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  },
+  "evaluation": {
+    "deadline": "2026-11-10"
+  }
+}
