@@ -24,5 +24,7 @@ jobs:
         run: npm run check:workspace-compatibility
       - name: Check CSV parsing and imports
         run: npm run check:csv
+      - name: Check evaluation reporting
+        run: npm run check:reporting
       - run: npm run check:screens
       - run: npm run check:production
