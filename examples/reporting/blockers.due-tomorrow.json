@@ -1,0 +1,15 @@
+{
+  "scenario": "Show a reminder one day before the target.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "deadline-pilot"
+    ],
+    "contains": [
+      "1 days remaining"
+    ]
+  },
+  "evaluation": {
+    "deadline": "2026-11-11"
+  }
+}
