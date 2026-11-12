@@ -1,0 +1,15 @@
+{
+  "scenario": "Include a target on the last day of the default reminder window.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "deadline-pilot"
+    ],
+    "contains": [
+      "7 days remaining"
+    ]
+  },
+  "evaluation": {
+    "deadline": "2026-11-17"
+  }
+}
