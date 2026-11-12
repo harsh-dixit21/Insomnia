@@ -1,0 +1,23 @@
+{
+  "scenario": "Export the recorded failure evidence.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Test latency — Failed",
+      "Recorded result (buyer-provided): Recorded failed observation"
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Failed",
+        "result": "Recorded failed observation for latency."
+      }
+    ]
+  }
+}
