@@ -1,0 +1,44 @@
+{
+  "scenario": "Preserve unresolved test order while filtering passed checks.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "first",
+      "last"
+    ],
+    "contains": [
+      "Recorded failed observation for last."
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "first",
+        "evaluationId": "pilot",
+        "name": "Test first",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      },
+      {
+        "id": "middle",
+        "evaluationId": "pilot",
+        "name": "Test middle",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for middle."
+      },
+      {
+        "id": "last",
+        "evaluationId": "pilot",
+        "name": "Test last",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Failed",
+        "result": "Recorded failed observation for last."
+      }
+    ]
+  }
+}
