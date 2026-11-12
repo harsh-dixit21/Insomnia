@@ -1,0 +1,40 @@
+{
+  "scenario": "Include a saved report's summary, evidence, and source topic.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Recorded pilot review",
+      "Synthetic review summary.",
+      "Reconciliation needs review.",
+      "Source topic: open"
+    ]
+  },
+  "workspace": {
+    "artifacts": [
+      {
+        "id": "report",
+        "evaluationId": "pilot",
+        "tool": "migration",
+        "inputs": {
+          "sql": "SELECT 1"
+        },
+        "created": "2026-11-09T12:00:00",
+        "result": {
+          "title": "Recorded pilot review",
+          "summary": "Synthetic review summary.",
+          "sections": [
+            {
+              "heading": "Evidence",
+              "lines": [
+                "Reconciliation needs review."
+              ]
+            }
+          ],
+          "sourceIds": [
+            "open"
+          ]
+        }
+      }
+    ]
+  }
+}
