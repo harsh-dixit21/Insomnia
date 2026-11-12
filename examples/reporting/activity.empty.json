@@ -1,0 +1,18 @@
+{
+  "scenario": "Show empty weekly buckets for an empty timeline.",
+  "operation": "activity",
+  "expected": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "workspace": {
+    "events": [],
+    "artifacts": []
+  }
+}
