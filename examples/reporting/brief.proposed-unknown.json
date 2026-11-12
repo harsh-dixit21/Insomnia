@@ -1,0 +1,23 @@
+{
+  "scenario": "Keep the result unknown for a proposed test.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "Test latency — Proposed",
+      "Result: unknown."
+    ]
+  },
+  "workspace": {
+    "tests": [
+      {
+        "id": "latency",
+        "evaluationId": "pilot",
+        "name": "Test latency",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  }
+}
