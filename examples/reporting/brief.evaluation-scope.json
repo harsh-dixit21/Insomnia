@@ -1,0 +1,65 @@
+{
+  "scenario": "Keep other evaluations' rows out of the selected brief.",
+  "operation": "brief",
+  "expected": {
+    "contains": [
+      "# Example Manufacturing",
+      "## Report inventory"
+    ],
+    "excludes": [
+      "Foreign inventory only",
+      "Foreign acceptance only",
+      "Foreign report only",
+      "Separate evaluation"
+    ]
+  },
+  "workspace": {
+    "workloads": [
+      {
+        "id": "foreign",
+        "report": "Foreign inventory only",
+        "critical": true,
+        "evaluationId": "other",
+        "baseline": 5,
+        "target": 2
+      }
+    ],
+    "tests": [
+      {
+        "id": "foreign-test",
+        "evaluationId": "other",
+        "name": "Foreign acceptance only",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "foreign-report",
+        "evaluationId": "other",
+        "tool": "migration",
+        "inputs": {
+          "sql": "SELECT 1"
+        },
+        "created": "2026-11-09T12:00:00",
+        "result": {
+          "title": "Foreign report only",
+          "summary": "Synthetic review summary.",
+          "sections": [
+            {
+              "heading": "Evidence",
+              "lines": [
+                "Reconciliation needs review."
+              ]
+            }
+          ],
+          "sourceIds": [
+            "open"
+          ]
+        }
+      }
+    ]
+  }
+}
