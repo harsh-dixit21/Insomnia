@@ -1,0 +1,24 @@
+{
+  "scenario": "Exclude an event just before the window.",
+  "operation": "activity",
+  "expected": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "workspace": {
+    "events": [
+      {
+        "id": "event",
+        "action": "Recorded a synthetic observation",
+        "date": "2026-10-27T23:59:59"
+      }
+    ],
+    "artifacts": []
+  }
+}
