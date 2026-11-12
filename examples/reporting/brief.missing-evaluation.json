@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject a brief request for an unknown evaluation.",
+  "operation": "brief",
+  "evaluationId": "missing",
+  "expectedError": "Evaluation not found"
+}
