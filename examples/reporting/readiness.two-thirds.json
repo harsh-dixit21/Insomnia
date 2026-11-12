@@ -1,0 +1,36 @@
+{
+  "scenario": "Round two passes out of three to the nearest percent.",
+  "operation": "readiness",
+  "expected": 67,
+  "workspace": {
+    "tests": [
+      {
+        "id": "a",
+        "evaluationId": "pilot",
+        "name": "Test a",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for a."
+      },
+      {
+        "id": "b",
+        "evaluationId": "pilot",
+        "name": "Test b",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Passed",
+        "result": "Recorded passed observation for b."
+      },
+      {
+        "id": "c",
+        "evaluationId": "pilot",
+        "name": "Test c",
+        "criterion": "Reconcile the approved dataset.",
+        "owner": "Pilot owner",
+        "status": "Proposed",
+        "result": ""
+      }
+    ]
+  }
+}
