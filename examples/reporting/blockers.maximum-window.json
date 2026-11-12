@@ -1,0 +1,20 @@
+{
+  "scenario": "Include both upcoming evaluations in a ninety-day window.",
+  "operation": "blockers",
+  "expected": {
+    "ids": [
+      "deadline-pilot",
+      "deadline-other"
+    ],
+    "contains": [
+      "21 days remaining",
+      "52 days remaining"
+    ]
+  },
+  "workspace": {
+    "settings": {
+      "workspace": "Example workspace",
+      "reminderDays": 90
+    }
+  }
+}
