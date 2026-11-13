@@ -1,0 +1,11 @@
+{
+  "scenario": "Keep blank questions unknown.",
+  "operation": "security",
+  "question": " \t ",
+  "expected": {
+    "status": "Unknown",
+    "sourceId": null,
+    "reason": "Empty question.",
+    "question": ""
+  }
+}
