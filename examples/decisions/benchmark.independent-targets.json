@@ -1,0 +1,40 @@
+{
+  "scenario": "Apply each workload's own latency target.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 1,
+  "series": [
+    {
+      "seconds": [
+        3
+      ],
+      "concurrency": 10,
+      "workloadId": "WL-0-1",
+      "correct": true
+    },
+    {
+      "seconds": [
+        3
+      ],
+      "concurrency": 10,
+      "workloadId": "WL-0-2",
+      "correct": true
+    }
+  ],
+  "expected": [
+    {
+      "report": "Daily portfolio summary",
+      "status": "Passed",
+      "p95": 3,
+      "samples": 1,
+      "failedCorrectness": false
+    },
+    {
+      "report": "Critical customer lookup",
+      "status": "Failed",
+      "p95": 3,
+      "samples": 1,
+      "failedCorrectness": false
+    }
+  ]
+}
