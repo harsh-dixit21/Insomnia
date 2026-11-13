@@ -1,0 +1,51 @@
+{
+  "scenario": "Sort timings before selecting the nearest-rank percentile.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 20,
+  "series": [
+    {
+      "seconds": [
+        100,
+        19,
+        18,
+        17,
+        16,
+        15,
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "concurrency": 10,
+      "workloadId": "WL-0-1",
+      "correct": true
+    }
+  ],
+  "expected": [
+    {
+      "report": "Daily portfolio summary",
+      "status": "Failed",
+      "p95": 19,
+      "samples": 20,
+      "failedCorrectness": false
+    },
+    {
+      "report": "Critical customer lookup",
+      "status": "Insufficient evidence",
+      "p95": null,
+      "samples": 0,
+      "failedCorrectness": false
+    }
+  ]
+}
