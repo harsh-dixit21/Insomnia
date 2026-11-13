@@ -1,0 +1,23 @@
+{
+  "scenario": "Report missing evidence for both workloads.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 1,
+  "series": [],
+  "expected": [
+    {
+      "report": "Daily portfolio summary",
+      "status": "Insufficient evidence",
+      "p95": null,
+      "samples": 0,
+      "failedCorrectness": false
+    },
+    {
+      "report": "Critical customer lookup",
+      "status": "Insufficient evidence",
+      "p95": null,
+      "samples": 0,
+      "failedCorrectness": false
+    }
+  ]
+}
