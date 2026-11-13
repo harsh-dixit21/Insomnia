@@ -1,0 +1,10 @@
+{
+  "scenario": "Classify this public capability as a documentation draft.",
+  "operation": "security",
+  "question": "Is hybrid deployment available?",
+  "expected": {
+    "status": "Documentation draft",
+    "sourceId": "deployment",
+    "reason": "Public capability description only"
+  }
+}
