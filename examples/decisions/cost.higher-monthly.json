@@ -1,0 +1,12 @@
+{
+  "scenario": "Report a negative saving and no payback for a higher monthly cost.",
+  "operation": "cost",
+  "inputs": {
+    "current": "2000"
+  },
+  "expected": {
+    "monthlySavings": -1000,
+    "savings": -12000,
+    "payback": null
+  }
+}
