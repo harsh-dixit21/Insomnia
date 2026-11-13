@@ -1,0 +1,14 @@
+{
+  "scenario": "Keep migration fixed across a longer comparison horizon.",
+  "operation": "cost",
+  "inputs": {
+    "years": "3",
+    "migration": "6000"
+  },
+  "expected": {
+    "currentTotal": 180000,
+    "proposedTotal": 114000,
+    "savings": 66000,
+    "payback": 3
+  }
+}
