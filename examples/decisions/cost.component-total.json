@@ -1,0 +1,12 @@
+{
+  "scenario": "Include license, infrastructure, operations, and support in the monthly total.",
+  "operation": "cost",
+  "inputs": {
+    "support": "500"
+  },
+  "expected": {
+    "monthly": 3500,
+    "proposedTotal": 42000,
+    "savings": 18000
+  }
+}
