@@ -1,0 +1,11 @@
+{
+  "scenario": "Accept a quote equal to the snapshot's Business Critical floor.",
+  "operation": "cost",
+  "inputs": {
+    "plan": "Business Critical quote",
+    "quote": "250000"
+  },
+  "expected": {
+    "license": 250000
+  }
+}
