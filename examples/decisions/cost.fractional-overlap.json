@@ -1,0 +1,13 @@
+{
+  "scenario": "Preserve a supplied partial month of overlap.",
+  "operation": "cost",
+  "inputs": {
+    "overlap": "0.5"
+  },
+  "expected": {
+    "transition": 2500,
+    "proposedTotal": 38500,
+    "savings": 21500,
+    "payback": 1.25
+  }
+}
