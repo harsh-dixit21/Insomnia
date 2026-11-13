@@ -1,0 +1,14 @@
+{
+  "scenario": "Combine migration and overlapping operation.",
+  "operation": "cost",
+  "inputs": {
+    "migration": "6000",
+    "overlap": "2"
+  },
+  "expected": {
+    "transition": 16000,
+    "proposedTotal": 52000,
+    "savings": 8000,
+    "payback": 8
+  }
+}
