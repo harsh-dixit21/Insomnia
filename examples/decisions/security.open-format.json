@@ -1,0 +1,10 @@
+{
+  "scenario": "Classify this public capability as a documentation draft.",
+  "operation": "security",
+  "question": "Does the platform support an open format?",
+  "expected": {
+    "status": "Documentation draft",
+    "sourceId": "open",
+    "reason": "Public capability description only"
+  }
+}
