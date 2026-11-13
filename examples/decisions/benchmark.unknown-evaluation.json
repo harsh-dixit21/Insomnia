@@ -1,0 +1,9 @@
+{
+  "scenario": "Return no rows for an evaluation outside the workspace.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 1,
+  "series": [],
+  "expected": [],
+  "evaluationId": "missing"
+}
