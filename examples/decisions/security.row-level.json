@@ -1,0 +1,10 @@
+{
+  "scenario": "Classify this public capability as a documentation draft.",
+  "operation": "security",
+  "question": "Is row-level access control supported?",
+  "expected": {
+    "status": "Documentation draft",
+    "sourceId": "governance",
+    "reason": "Public capability description only"
+  }
+}
