@@ -1,0 +1,11 @@
+{
+  "scenario": "Use the annual minimum stored in the engine's pricing snapshot.",
+  "operation": "cost",
+  "inputs": {
+    "plan": "Enterprise list estimate",
+    "vcpu": "199"
+  },
+  "expected": {
+    "license": 100000
+  }
+}
