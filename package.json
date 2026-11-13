@@ -16,6 +16,7 @@
     "check:workspace-compatibility": "node --experimental-strip-types scripts/check-workspace-compatibility.mjs",
     "check:csv": "node --experimental-strip-types scripts/check-csv-examples.mjs",
     "check:reporting": "node --experimental-strip-types scripts/check-reporting-examples.mjs",
+    "check:decisions": "node --experimental-strip-types scripts/check-decision-examples.mjs",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs",
     "check:production": "node --experimental-strip-types scripts/check-production.mjs",
     "backup": "node --env-file-if-exists=.env --experimental-strip-types scripts/backup.mjs"
