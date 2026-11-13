@@ -1,0 +1,11 @@
+{
+  "scenario": "Use the snapshot's per-vCPU rate above its minimum.",
+  "operation": "cost",
+  "inputs": {
+    "plan": "Enterprise list estimate",
+    "vcpu": "201"
+  },
+  "expected": {
+    "license": 100500
+  }
+}
