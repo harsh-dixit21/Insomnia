@@ -1,0 +1,10 @@
+{
+  "scenario": "Keep this request open for additional evidence.",
+  "operation": "security",
+  "question": "Is Kubernetes supported? Is Iceberg supported?",
+  "expected": {
+    "status": "Unknown",
+    "sourceId": null,
+    "reason": "Split compound questions"
+  }
+}
