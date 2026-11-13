@@ -1,0 +1,10 @@
+{
+  "scenario": "Classify this public capability as a documentation draft.",
+  "operation": "security",
+  "question": "Does the platform support data residency?",
+  "expected": {
+    "status": "Documentation draft",
+    "sourceId": "sovereignty",
+    "reason": "Public capability description only"
+  }
+}
