@@ -1,0 +1,32 @@
+{
+  "scenario": "Record a passing critical result independently of the standard workload.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 1,
+  "series": [
+    {
+      "seconds": [
+        2
+      ],
+      "concurrency": 10,
+      "workloadId": "WL-0-2",
+      "correct": true
+    }
+  ],
+  "expected": [
+    {
+      "report": "Daily portfolio summary",
+      "status": "Insufficient evidence",
+      "p95": null,
+      "samples": 0,
+      "failedCorrectness": false
+    },
+    {
+      "report": "Critical customer lookup",
+      "status": "Passed",
+      "p95": 2,
+      "samples": 1,
+      "failedCorrectness": false
+    }
+  ]
+}
