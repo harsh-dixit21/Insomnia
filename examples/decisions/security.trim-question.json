@@ -1,0 +1,11 @@
+{
+  "scenario": "Preserve the question text after trimming.",
+  "operation": "security",
+  "question": " \n Is RBAC supported? \t",
+  "expected": {
+    "status": "Documentation draft",
+    "sourceId": "governance",
+    "reason": "Public capability description only",
+    "question": "Is RBAC supported?"
+  }
+}
