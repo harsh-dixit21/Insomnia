@@ -1,0 +1,13 @@
+{
+  "scenario": "Account for all proposed costs against a zero baseline.",
+  "operation": "cost",
+  "inputs": {
+    "current": "0"
+  },
+  "expected": {
+    "currentTotal": 0,
+    "proposedTotal": 36000,
+    "savings": -36000,
+    "payback": null
+  }
+}
