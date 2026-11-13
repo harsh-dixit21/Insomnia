@@ -1,0 +1,10 @@
+{
+  "scenario": "Keep this request open for additional evidence.",
+  "operation": "security",
+  "question": "Is Kubernetes used for Iceberg tables?",
+  "expected": {
+    "status": "Unknown",
+    "sourceId": null,
+    "reason": "Several documentation topics"
+  }
+}
