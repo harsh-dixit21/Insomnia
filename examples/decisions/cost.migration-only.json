@@ -1,0 +1,13 @@
+{
+  "scenario": "Account for migration as a one-time expense.",
+  "operation": "cost",
+  "inputs": {
+    "migration": "6000"
+  },
+  "expected": {
+    "transition": 6000,
+    "proposedTotal": 42000,
+    "savings": 18000,
+    "payback": 3
+  }
+}
