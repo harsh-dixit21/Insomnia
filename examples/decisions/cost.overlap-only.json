@@ -1,0 +1,13 @@
+{
+  "scenario": "Charge overlapping operation at the existing monthly cost.",
+  "operation": "cost",
+  "inputs": {
+    "overlap": "2"
+  },
+  "expected": {
+    "transition": 10000,
+    "proposedTotal": 46000,
+    "savings": 14000,
+    "payback": 5
+  }
+}
