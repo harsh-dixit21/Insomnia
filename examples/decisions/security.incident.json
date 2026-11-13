@@ -1,0 +1,10 @@
+{
+  "scenario": "Keep this request open for additional evidence.",
+  "operation": "security",
+  "question": "What incident response time is guaranteed?",
+  "expected": {
+    "status": "Unknown",
+    "sourceId": null,
+    "reason": "Requires specific assurance"
+  }
+}
