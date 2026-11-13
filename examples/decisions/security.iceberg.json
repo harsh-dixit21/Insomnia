@@ -1,0 +1,10 @@
+{
+  "scenario": "Classify this public capability as a documentation draft.",
+  "operation": "security",
+  "question": "Is Apache Iceberg supported?",
+  "expected": {
+    "status": "Documentation draft",
+    "sourceId": "open",
+    "reason": "Public capability description only"
+  }
+}
