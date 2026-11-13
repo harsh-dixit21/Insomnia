@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve cents in monthly cost and totals.",
+  "operation": "cost",
+  "inputs": {
+    "support": "12.50"
+  },
+  "expected": {
+    "monthly": 3012.5,
+    "proposedTotal": 36150,
+    "savings": 23850
+  }
+}
