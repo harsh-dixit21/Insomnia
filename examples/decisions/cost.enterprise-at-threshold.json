@@ -1,0 +1,11 @@
+{
+  "scenario": "Match the annual minimum at the snapshot's rate threshold.",
+  "operation": "cost",
+  "inputs": {
+    "plan": "Enterprise list estimate",
+    "vcpu": "200"
+  },
+  "expected": {
+    "license": 100000
+  }
+}
