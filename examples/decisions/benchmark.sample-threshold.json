@@ -1,0 +1,33 @@
+{
+  "scenario": "Pass with exactly the required number of samples.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 2,
+  "series": [
+    {
+      "seconds": [
+        1,
+        2
+      ],
+      "concurrency": 10,
+      "workloadId": "WL-0-1",
+      "correct": true
+    }
+  ],
+  "expected": [
+    {
+      "report": "Daily portfolio summary",
+      "status": "Passed",
+      "p95": 2,
+      "samples": 2,
+      "failedCorrectness": false
+    },
+    {
+      "report": "Critical customer lookup",
+      "status": "Insufficient evidence",
+      "p95": null,
+      "samples": 0,
+      "failedCorrectness": false
+    }
+  ]
+}
