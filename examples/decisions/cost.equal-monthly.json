@@ -1,0 +1,12 @@
+{
+  "scenario": "Leave payback undefined when both monthly costs are equal.",
+  "operation": "cost",
+  "inputs": {
+    "current": "3000"
+  },
+  "expected": {
+    "monthlySavings": 0,
+    "savings": 0,
+    "payback": null
+  }
+}
