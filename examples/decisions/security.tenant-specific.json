@@ -1,0 +1,10 @@
+{
+  "scenario": "Keep this request open for additional evidence.",
+  "operation": "security",
+  "question": "Does our private cloud meet the requirements?",
+  "expected": {
+    "status": "Unknown",
+    "sourceId": null,
+    "reason": "Requires specific assurance"
+  }
+}
