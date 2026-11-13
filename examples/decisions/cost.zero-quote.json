@@ -1,0 +1,12 @@
+{
+  "scenario": "Include a supplied zero license quote.",
+  "operation": "cost",
+  "inputs": {
+    "quote": "0"
+  },
+  "expected": {
+    "license": 0,
+    "monthly": 2000,
+    "savings": 36000
+  }
+}
