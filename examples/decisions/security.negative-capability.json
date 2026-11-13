@@ -1,0 +1,10 @@
+{
+  "scenario": "Keep this request open for additional evidence.",
+  "operation": "security",
+  "question": "Can the platform operate without RBAC?",
+  "expected": {
+    "status": "Unknown",
+    "sourceId": null,
+    "reason": "Requires specific assurance"
+  }
+}
