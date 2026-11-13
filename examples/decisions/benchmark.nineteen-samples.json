@@ -1,0 +1,50 @@
+{
+  "scenario": "Use the maximum for p95 when nineteen samples are available.",
+  "operation": "benchmark",
+  "concurrency": 10,
+  "samples": 19,
+  "series": [
+    {
+      "seconds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "concurrency": 10,
+      "workloadId": "WL-0-1",
+      "correct": true
+    }
+  ],
+  "expected": [
+    {
+      "report": "Daily portfolio summary",
+      "status": "Failed",
+      "p95": 19,
+      "samples": 19,
+      "failedCorrectness": false
+    },
+    {
+      "report": "Critical customer lookup",
+      "status": "Insufficient evidence",
+      "p95": null,
+      "samples": 0,
+      "failedCorrectness": false
+    }
+  ]
+}
