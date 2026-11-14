@@ -1,0 +1,15 @@
+{
+  "scenario": "Select sales from the requested day.",
+  "sql": "SELECT id FROM sales WHERE order_date = '2026-10-02' ORDER BY id",
+  "columns": [
+    "id"
+  ],
+  "rows": [
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ]
+}
