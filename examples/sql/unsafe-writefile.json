@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject file-writing functions in the SQLite worker.",
+  "sql": "SELECT writefile('fixture.txt','value')",
+  "expectedError": "Sandbox query rejected or invalid."
+}
