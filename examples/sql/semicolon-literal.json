@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve a semicolon inside a quoted string.",
+  "sql": "SELECT 'a;b' AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": "a;b"
+    }
+  ]
+}
