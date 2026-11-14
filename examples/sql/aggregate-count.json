@@ -1,0 +1,12 @@
+{
+  "scenario": "Count rows in the customer fixture.",
+  "sql": "SELECT COUNT(*) AS customer_count FROM customers",
+  "columns": [
+    "customer_count"
+  ],
+  "rows": [
+    {
+      "customer_count": 2
+    }
+  ]
+}
