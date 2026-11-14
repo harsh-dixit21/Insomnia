@@ -1,0 +1,17 @@
+{
+  "scenario": "Report truncation when the query produces a 101st row.",
+  "sql": "WITH digits(n) AS (VALUES (0),(1),(2),(3),(4),(5),(6),(7),(8),(9)) SELECT a.n*10+b.n AS n FROM digits a CROSS JOIN digits b UNION ALL SELECT 100 ORDER BY n",
+  "columns": [
+    "n"
+  ],
+  "rows": [
+    {
+      "n": 0
+    },
+    {
+      "n": 99
+    }
+  ],
+  "rowCount": 100,
+  "truncated": true
+}
