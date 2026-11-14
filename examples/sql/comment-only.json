@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject input with no statement.",
+  "sql": "/* SELECT 1 */",
+  "expectedError": "Only one read-only SELECT query is supported."
+}
