@@ -1,5 +1,7 @@
 # Runnable evaluation examples
 
+The [SQL sandbox suite](sql/README.md) covers 53 query results and rejection cases. Run `npm run check:sql` to verify the local query guard and SQLite worker against synthetic data.
+
 The [decision suite](decisions/README.md) adds 53 focused checks for benchmark outcomes, cost calculations, and security review. Run `npm run check:decisions` to validate the results used by the corresponding tools.
 
 The [reporting suite](reporting/README.md) covers 53 readiness, deadline, activity, and Markdown export scenarios. Run `npm run check:reporting` to verify their results against fixed synthetic workspaces.
