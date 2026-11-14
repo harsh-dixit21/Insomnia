@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject an unresolved projection.",
+  "sql": "SELECT missing_column FROM sales",
+  "expectedError": "Sandbox query rejected or invalid."
+}
