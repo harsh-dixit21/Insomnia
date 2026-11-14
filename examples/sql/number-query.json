@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject a number supplied as SQL.",
+  "sql": 123,
+  "expectedError": "Use a SQL query under 20,000 characters."
+}
