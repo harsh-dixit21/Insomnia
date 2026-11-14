@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject empty SQL input.",
+  "sql": "",
+  "expectedError": "Use a SQL query under 20,000 characters."
+}
