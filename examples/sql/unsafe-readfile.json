@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject file-reading functions in the SQLite worker.",
+  "sql": "SELECT readfile('fixture.txt')",
+  "expectedError": "Sandbox query rejected or invalid."
+}
