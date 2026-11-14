@@ -1,0 +1,12 @@
+{
+  "scenario": "Keep escaped quotes and blocked words inside a literal.",
+  "sql": "SELECT 'buyer''s DELETE; report' AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": "buyer's DELETE; report"
+    }
+  ]
+}
