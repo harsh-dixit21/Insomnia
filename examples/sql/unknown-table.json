@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject a query for a table outside the sandbox fixtures.",
+  "sql": "SELECT * FROM orders",
+  "expectedError": "Sandbox query rejected or invalid."
+}
