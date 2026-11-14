@@ -1,0 +1,5 @@
+{
+  "scenario": "Apply the guard to a trailing statement separator.",
+  "sql": "SELECT 1;",
+  "expectedError": "Only one read-only SELECT query is supported."
+}
