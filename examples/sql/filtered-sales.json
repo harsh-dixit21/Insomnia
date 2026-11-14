@@ -1,0 +1,15 @@
+{
+  "scenario": "Return only the matching regional sales.",
+  "sql": "SELECT revenue FROM sales WHERE region = 'North' ORDER BY id",
+  "columns": [
+    "revenue"
+  ],
+  "rows": [
+    {
+      "revenue": 1200
+    },
+    {
+      "revenue": 600
+    }
+  ]
+}
