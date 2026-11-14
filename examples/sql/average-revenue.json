@@ -1,0 +1,12 @@
+{
+  "scenario": "Calculate an average over synthetic sales.",
+  "sql": "SELECT AVG(revenue) AS average FROM sales",
+  "columns": [
+    "average"
+  ],
+  "rows": [
+    {
+      "average": 1000
+    }
+  ]
+}
