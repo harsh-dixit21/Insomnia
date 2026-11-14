@@ -1,0 +1,12 @@
+{
+  "scenario": "Ignore keywords and a separator inside a block comment.",
+  "sql": "/* DELETE; UPDATE */ SELECT 2 AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 2
+    }
+  ]
+}
