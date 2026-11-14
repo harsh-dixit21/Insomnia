@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject explicit recursive CTEs.",
+  "sql": "WITH RECURSIVE sequence(n) AS (SELECT 1 UNION ALL SELECT n+1 FROM sequence WHERE n<3) SELECT n FROM sequence",
+  "expectedError": "Only one read-only SELECT query is supported."
+}
