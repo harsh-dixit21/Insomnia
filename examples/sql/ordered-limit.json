@@ -1,0 +1,15 @@
+{
+  "scenario": "Respect explicit sorting and row limits.",
+  "sql": "SELECT id FROM sales ORDER BY revenue DESC LIMIT 2",
+  "columns": [
+    "id"
+  ],
+  "rows": [
+    {
+      "id": 4
+    },
+    {
+      "id": 1
+    }
+  ]
+}
