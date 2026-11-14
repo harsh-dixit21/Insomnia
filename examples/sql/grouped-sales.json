@@ -1,0 +1,22 @@
+{
+  "scenario": "Compute ordered totals by region.",
+  "sql": "SELECT region, SUM(revenue) AS total FROM sales GROUP BY region ORDER BY region",
+  "columns": [
+    "region",
+    "total"
+  ],
+  "rows": [
+    {
+      "region": "North",
+      "total": 1800
+    },
+    {
+      "region": "South",
+      "total": 800
+    },
+    {
+      "region": "West",
+      "total": 1400
+    }
+  ]
+}
