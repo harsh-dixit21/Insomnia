@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve a write keyword inside a string.",
+  "sql": "SELECT 'DROP TABLE sales' AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": "DROP TABLE sales"
+    }
+  ]
+}
