@@ -1,0 +1,12 @@
+{
+  "scenario": "Support a nonrecursive common table expression.",
+  "sql": "WITH regional AS (SELECT region, SUM(revenue) AS total FROM sales GROUP BY region) SELECT total FROM regional WHERE region = 'North'",
+  "columns": [
+    "total"
+  ],
+  "rows": [
+    {
+      "total": 1800
+    }
+  ]
+}
