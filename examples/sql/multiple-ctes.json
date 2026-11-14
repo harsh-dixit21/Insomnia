@@ -1,0 +1,12 @@
+{
+  "scenario": "Allow multiple named read-only expressions.",
+  "sql": "WITH a AS (SELECT 2 AS n), b AS (SELECT 3 AS n) SELECT a.n + b.n AS value FROM a CROSS JOIN b",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 5
+    }
+  ]
+}
