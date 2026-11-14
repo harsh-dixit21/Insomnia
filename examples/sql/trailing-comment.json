@@ -1,0 +1,12 @@
+{
+  "scenario": "Allow a trailing comment after one statement.",
+  "sql": "SELECT 8 AS value -- DELETE;",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 8
+    }
+  ]
+}
