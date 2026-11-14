@@ -1,0 +1,15 @@
+{
+  "scenario": "Support a nested read-only SELECT.",
+  "sql": "SELECT id FROM sales WHERE revenue > (SELECT AVG(revenue) FROM sales) ORDER BY id",
+  "columns": [
+    "id"
+  ],
+  "rows": [
+    {
+      "id": 1
+    },
+    {
+      "id": 4
+    }
+  ]
+}
