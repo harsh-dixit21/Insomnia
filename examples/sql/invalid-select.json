@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject incomplete SQL after it reaches SQLite.",
+  "sql": "SELECT FROM sales",
+  "expectedError": "Sandbox query rejected or invalid."
+}
