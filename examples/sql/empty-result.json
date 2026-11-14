@@ -1,0 +1,9 @@
+{
+  "scenario": "Return column metadata when no rows match.",
+  "sql": "SELECT region, revenue FROM sales WHERE region = 'Missing'",
+  "columns": [
+    "region",
+    "revenue"
+  ],
+  "rows": []
+}
