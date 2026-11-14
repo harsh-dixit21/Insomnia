@@ -1,0 +1,12 @@
+{
+  "scenario": "Accept a SELECT surrounded by whitespace.",
+  "sql": " \n SELECT 1 AS value \t",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 1
+    }
+  ]
+}
