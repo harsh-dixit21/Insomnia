@@ -28,5 +28,7 @@ jobs:
         run: npm run check:reporting
       - name: Check benchmark, cost, and security decisions
         run: npm run check:decisions
+      - name: Check SQL sandbox behavior
+        run: npm run check:sql
       - run: npm run check:screens
       - run: npm run check:production
