@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject an UPDATE statement.",
+  "sql": "UPDATE sales SET revenue=0",
+  "expectedError": "Only one read-only SELECT query is supported."
+}
