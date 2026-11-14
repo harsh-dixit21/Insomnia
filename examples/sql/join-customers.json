@@ -1,0 +1,18 @@
+{
+  "scenario": "Join sales and customers within matching regions.",
+  "sql": "SELECT customers.name, COUNT(sales.id) AS orders FROM customers JOIN sales USING(region) GROUP BY customers.id ORDER BY customers.id",
+  "columns": [
+    "name",
+    "orders"
+  ],
+  "rows": [
+    {
+      "name": "Example buyer A",
+      "orders": 2
+    },
+    {
+      "name": "Example buyer B",
+      "orders": 1
+    }
+  ]
+}
