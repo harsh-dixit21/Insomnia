@@ -1,0 +1,12 @@
+{
+  "scenario": "Preserve literal block and line comment markers.",
+  "sql": "SELECT 'a--b/*c*/' AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": "a--b/*c*/"
+    }
+  ]
+}
