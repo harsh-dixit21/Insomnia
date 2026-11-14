@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject an ATTACH statement.",
+  "sql": "ATTACH DATABASE ':memory:' AS extra",
+  "expectedError": "Only one read-only SELECT query is supported."
+}
