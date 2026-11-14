@@ -1,0 +1,12 @@
+{
+  "scenario": "Accept case-insensitive SELECT.",
+  "sql": "sElEcT 42 AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 42
+    }
+  ]
+}
