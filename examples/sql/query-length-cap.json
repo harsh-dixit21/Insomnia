@@ -1,0 +1,13 @@
+{
+  "scenario": "Accept a query at the configured character boundary.",
+  "sql": "SELECT 1 AS n /*{{padding}}*/",
+  "length": 20000,
+  "columns": [
+    "n"
+  ],
+  "rows": [
+    {
+      "n": 1
+    }
+  ]
+}
