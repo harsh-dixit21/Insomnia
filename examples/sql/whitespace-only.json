@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject whitespace-only SQL.",
+  "sql": " \t\r\n ",
+  "expectedError": "Use a SQL query under 20,000 characters."
+}
