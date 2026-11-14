@@ -1,0 +1,12 @@
+{
+  "scenario": "Keep null results in the result rows.",
+  "sql": "SELECT NULL AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": null
+    }
+  ]
+}
