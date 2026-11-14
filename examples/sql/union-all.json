@@ -1,0 +1,15 @@
+{
+  "scenario": "Allow a read-only UNION ALL in a single statement.",
+  "sql": "SELECT 1 AS n UNION ALL SELECT 2 AS n ORDER BY n",
+  "columns": [
+    "n"
+  ],
+  "rows": [
+    {
+      "n": 1
+    },
+    {
+      "n": 2
+    }
+  ]
+}
