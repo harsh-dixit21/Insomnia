@@ -1,0 +1,12 @@
+{
+  "scenario": "Allow a safe built-in SQL function.",
+  "sql": "SELECT COALESCE(NULL, 'missing') AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": "missing"
+    }
+  ]
+}
