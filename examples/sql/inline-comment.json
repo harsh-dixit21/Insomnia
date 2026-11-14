@@ -1,0 +1,12 @@
+{
+  "scenario": "Ignore an inline comment between tokens.",
+  "sql": "SELECT /* DROP */ 7 AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 7
+    }
+  ]
+}
