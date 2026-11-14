@@ -1,0 +1,6 @@
+{
+  "scenario": "Reject SQL above the character boundary.",
+  "sql": "SELECT 1 /*{{padding}}*/",
+  "length": 20001,
+  "expectedError": "Use a SQL query under 20,000 characters."
+}
