@@ -1,0 +1,12 @@
+{
+  "scenario": "Filter grouped results using an aggregate.",
+  "sql": "SELECT region FROM sales GROUP BY region HAVING SUM(revenue) > 1500 ORDER BY region",
+  "columns": [
+    "region"
+  ],
+  "rows": [
+    {
+      "region": "North"
+    }
+  ]
+}
