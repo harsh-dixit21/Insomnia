@@ -1,0 +1,12 @@
+{
+  "scenario": "Ignore a leading line comment in the guard.",
+  "sql": "-- DROP is just a comment\nSELECT 1 AS value",
+  "columns": [
+    "value"
+  ],
+  "rows": [
+    {
+      "value": 1
+    }
+  ]
+}
