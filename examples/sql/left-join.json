@@ -1,0 +1,12 @@
+{
+  "scenario": "Return a null customer when a sale has no matching region.",
+  "sql": "SELECT customers.name FROM sales LEFT JOIN customers USING(region) WHERE sales.id = 4",
+  "columns": [
+    "name"
+  ],
+  "rows": [
+    {
+      "name": null
+    }
+  ]
+}
