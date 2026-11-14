@@ -1,0 +1,5 @@
+{
+  "scenario": "Reject a PRAGMA statement.",
+  "sql": "PRAGMA database_list",
+  "expectedError": "Only one read-only SELECT query is supported."
+}
