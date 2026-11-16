@@ -1,0 +1,12 @@
+{
+  "scenario": "Keep catalogue order when topics have equal scores.",
+  "query": "iceberg audit",
+  "expectedTopics": [
+    "open",
+    "governance"
+  ],
+  "expectedScores": [
+    3,
+    3
+  ]
+}
