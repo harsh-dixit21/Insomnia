@@ -10,4 +10,15 @@ export const knowledge=[
 ] as const;
 export type Fact=typeof knowledge[number];
 export const fact=(id:string)=>knowledge.find(f=>f.id===id)!;
-export function searchKnowledge(query:string){const words=query.toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(w=>w.length>2);return knowledge.map(f=>({fact:f,score:words.reduce((score,w)=>score+(f.tags.some(t=>t.includes(w))?3:0)+(f.title.toLowerCase().includes(w)?2:0),0)})).filter(r=>r.score>0).sort((a,b)=>b.score-a.score);}
+export function searchKnowledge(query: string) {
+  const tokens = query.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/);
+  // Repeating a word does not add evidence of relevance.
+  const words = [...new Set(tokens.filter(word => word.length > 2))];
+  return knowledge.map(fact => {
+    const title = fact.title.toLowerCase();
+    const score = words.reduce((total, word) => total
+      + (fact.tags.some(tag => tag.includes(word)) ? 3 : 0)
+      + (title.includes(word) ? 2 : 0), 0);
+    return {fact, score};
+  }).filter(result => result.score > 0).sort((a, b) => b.score - a.score);
+}
