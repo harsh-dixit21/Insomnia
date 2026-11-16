@@ -1,0 +1,8 @@
+{
+  "scenario": "Find the sovereignty topic for “data residency”.",
+  "query": "data residency",
+  "expectedTopics": [
+    "sovereignty",
+    "governance"
+  ]
+}
