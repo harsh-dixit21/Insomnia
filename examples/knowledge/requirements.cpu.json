@@ -1,0 +1,8 @@
+{
+  "scenario": "Find the requirements topic for “CPU”.",
+  "query": "CPU",
+  "expectedTopics": [
+    "requirements",
+    "pricing"
+  ]
+}
