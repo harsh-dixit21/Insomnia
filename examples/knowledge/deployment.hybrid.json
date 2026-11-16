@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the deployment topic for “hybrid”.",
+  "query": "hybrid",
+  "expectedTopics": [
+    "deployment"
+  ]
+}
