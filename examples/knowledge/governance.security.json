@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the governance topic for “security”.",
+  "query": "security",
+  "expectedTopics": [
+    "governance"
+  ]
+}
