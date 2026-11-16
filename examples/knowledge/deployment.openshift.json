@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the deployment topic for “openshift”.",
+  "query": "openshift",
+  "expectedTopics": [
+    "deployment"
+  ]
+}
