@@ -1,0 +1,10 @@
+{
+  "scenario": "Use punctuation as a separator in mixed-case queries.",
+  "query": "(ICEBERG),\nSpark!",
+  "expectedTopics": [
+    "open"
+  ],
+  "expectedScores": [
+    6
+  ]
+}
