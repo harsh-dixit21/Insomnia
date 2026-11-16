@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the sovereignty topic for “customer-controlled infrastructure”.",
+  "query": "customer-controlled infrastructure",
+  "expectedTopics": [
+    "sovereignty"
+  ]
+}
