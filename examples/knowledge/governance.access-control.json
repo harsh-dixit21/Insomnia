@@ -1,0 +1,8 @@
+{
+  "scenario": "Find the governance topic for “access control”.",
+  "query": "access control",
+  "expectedTopics": [
+    "governance",
+    "sovereignty"
+  ]
+}
