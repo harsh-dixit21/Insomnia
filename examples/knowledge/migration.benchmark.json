@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the migration topic for “benchmark”.",
+  "query": "benchmark",
+  "expectedTopics": [
+    "migration"
+  ]
+}
