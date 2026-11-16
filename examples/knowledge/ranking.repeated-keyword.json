@@ -1,0 +1,12 @@
+{
+  "scenario": "Avoid inflating relevance with repeated keywords.",
+  "query": "budget BUDGET budget oracle benchmark",
+  "expectedTopics": [
+    "migration",
+    "pricing"
+  ],
+  "expectedScores": [
+    6,
+    3
+  ]
+}
