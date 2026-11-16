@@ -1,0 +1,5 @@
+{
+  "scenario": "Return an empty list for symbols without searchable terms.",
+  "query": "… ?! 🔎",
+  "expectedTopics": []
+}
