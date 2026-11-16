@@ -1,0 +1,5 @@
+{
+  "scenario": "Return no evidence for an unrelated topic.",
+  "query": "rainfall forecast",
+  "expectedTopics": []
+}
