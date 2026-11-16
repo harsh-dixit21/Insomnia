@@ -30,5 +30,7 @@ jobs:
         run: npm run check:decisions
       - name: Check SQL sandbox behavior
         run: npm run check:sql
+      - name: Check knowledge retrieval and ranking
+        run: npm run check:knowledge
       - run: npm run check:screens
       - run: npm run check:production
