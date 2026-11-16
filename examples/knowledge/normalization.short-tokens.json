@@ -1,0 +1,5 @@
+{
+  "scenario": "Skip tokens shorter than three characters.",
+  "query": "a is BI S3",
+  "expectedTopics": []
+}
