@@ -1,0 +1,12 @@
+{
+  "scenario": "Prefer a topic that matches the title as well as its tags.",
+  "query": "migration budget",
+  "expectedTopics": [
+    "migration",
+    "pricing"
+  ],
+  "expectedScores": [
+    5,
+    3
+  ]
+}
