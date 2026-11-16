@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the pricing topic for “finance”.",
+  "query": "finance",
+  "expectedTopics": [
+    "pricing"
+  ]
+}
