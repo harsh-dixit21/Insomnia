@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the open topic for “portability”.",
+  "query": "portability",
+  "expectedTopics": [
+    "open"
+  ]
+}
