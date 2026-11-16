@@ -1,0 +1,16 @@
+{
+  "scenario": "Return the distinct topics that a mixed query supports.",
+  "query": "postgres iceberg benchmark rbac",
+  "expectedTopics": [
+    "requirements",
+    "open",
+    "migration",
+    "governance"
+  ],
+  "expectedScores": [
+    3,
+    3,
+    3,
+    3
+  ]
+}
