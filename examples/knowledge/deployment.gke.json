@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the deployment topic for “gke”.",
+  "query": "gke",
+  "expectedTopics": [
+    "deployment"
+  ]
+}
