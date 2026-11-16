@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the requirements topic for “install”.",
+  "query": "install",
+  "expectedTopics": [
+    "requirements"
+  ]
+}
