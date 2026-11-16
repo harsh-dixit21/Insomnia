@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the requirements topic for “Postgres”.",
+  "query": "Postgres",
+  "expectedTopics": [
+    "requirements"
+  ]
+}
