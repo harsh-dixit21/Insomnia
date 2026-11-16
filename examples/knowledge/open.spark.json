@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the open topic for “Spark”.",
+  "query": "Spark",
+  "expectedTopics": [
+    "open"
+  ]
+}
