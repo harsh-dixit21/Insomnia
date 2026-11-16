@@ -18,6 +18,7 @@
     "check:reporting": "node --experimental-strip-types scripts/check-reporting-examples.mjs",
     "check:decisions": "node --experimental-strip-types scripts/check-decision-examples.mjs",
     "check:sql": "node --experimental-strip-types scripts/check-sql-examples.mjs",
+    "check:knowledge": "node --experimental-strip-types scripts/check-knowledge-examples.mjs",
     "start": "node --env-file-if-exists=.env --experimental-strip-types server/index.mjs",
     "check:production": "node --experimental-strip-types scripts/check-production.mjs",
     "backup": "node --env-file-if-exists=.env --experimental-strip-types scripts/backup.mjs"
