@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the requirements topic for “object storage”.",
+  "query": "object storage",
+  "expectedTopics": [
+    "requirements"
+  ]
+}
