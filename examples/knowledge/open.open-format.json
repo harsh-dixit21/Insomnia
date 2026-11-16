@@ -1,0 +1,8 @@
+{
+  "scenario": "Find the open topic for “open format”.",
+  "query": "open format",
+  "expectedTopics": [
+    "open",
+    "deployment"
+  ]
+}
