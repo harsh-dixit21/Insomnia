@@ -1,0 +1,12 @@
+{
+  "scenario": "Rank a topic supported by more distinct concepts first.",
+  "query": "budget oracle benchmark",
+  "expectedTopics": [
+    "migration",
+    "pricing"
+  ],
+  "expectedScores": [
+    6,
+    3
+  ]
+}
