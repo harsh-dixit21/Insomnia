@@ -1,0 +1,7 @@
+{
+  "scenario": "Find the sovereignty topic for “on premises”.",
+  "query": "on premises",
+  "expectedTopics": [
+    "sovereignty"
+  ]
+}
