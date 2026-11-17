@@ -1,0 +1,5 @@
+{
+  "scenario": "oracle custom delimiter",
+  "sql": "SELECT q'!user's DECODE(x)!', nq'Abuyer's UPDATE a' ROWNUM A' FROM t",
+  "expectedFlags": []
+}
