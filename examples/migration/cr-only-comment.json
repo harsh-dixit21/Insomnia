@@ -1,0 +1,7 @@
+{
+  "scenario": "cr only comment",
+  "sql": "-- fake UPDATE\rSELECT ROWNUM FROM t",
+  "expectedFlags": [
+    "Review ROWNUM"
+  ]
+}
