@@ -1,0 +1,13 @@
+{
+  "scenario": "gates unresolved",
+  "sql": "SELECT x FROM t",
+  "expectedFlags": [],
+  "gates": {
+    "cdc": "No",
+    "reconcile": "Unknown"
+  },
+  "expectedGates": [
+    "CDC confirmed: No.",
+    "Reconciliation confirmed: Unknown."
+  ]
+}
