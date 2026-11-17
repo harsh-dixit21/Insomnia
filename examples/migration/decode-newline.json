@@ -1,0 +1,7 @@
+{
+  "scenario": "decode newline",
+  "sql": "SELECT DeCoDe\n(x, 1, 2) FROM t",
+  "expectedFlags": [
+    "Review DECODE"
+  ]
+}
