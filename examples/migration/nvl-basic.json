@@ -1,0 +1,7 @@
+{
+  "scenario": "nvl basic",
+  "sql": "SELECT NVL(x, 0) FROM t",
+  "expectedFlags": [
+    "Review NVL"
+  ]
+}
