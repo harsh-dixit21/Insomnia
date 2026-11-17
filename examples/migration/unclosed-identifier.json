@@ -1,0 +1,5 @@
+{
+  "scenario": "unclosed identifier",
+  "sql": "SELECT \"ROWNUM UPDATE",
+  "expectedFlags": []
+}
