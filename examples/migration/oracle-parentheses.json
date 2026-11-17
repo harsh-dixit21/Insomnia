@@ -1,0 +1,5 @@
+{
+  "scenario": "oracle parentheses",
+  "sql": "SELECT q'(customer's ROWNUM)' FROM t",
+  "expectedFlags": []
+}
