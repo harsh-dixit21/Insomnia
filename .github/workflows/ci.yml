@@ -32,5 +32,7 @@ jobs:
         run: npm run check:sql
       - name: Check knowledge retrieval and ranking
         run: npm run check:knowledge
+      - name: Check SQL migration review
+        run: npm run check:migration
       - run: npm run check:screens
       - run: npm run check:production
