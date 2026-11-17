@@ -1,0 +1,7 @@
+{
+  "scenario": "crlf comment",
+  "sql": "-- fake DELETE\r\nSELECT NVL(x, 0) FROM t",
+  "expectedFlags": [
+    "Review NVL"
+  ]
+}
