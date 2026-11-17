@@ -1,0 +1,7 @@
+{
+  "scenario": "update",
+  "sql": "UPDATE t SET x = 1",
+  "expectedFlags": [
+    "Review write semantics"
+  ]
+}
