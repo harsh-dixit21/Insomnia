@@ -1,0 +1,8 @@
+{
+  "scenario": "repeated flags",
+  "sql": "SELECT NVL(x, NVL(y, 0)), ROWNUM FROM t WHERE ROWNUM < 10",
+  "expectedFlags": [
+    "Review NVL",
+    "Review ROWNUM"
+  ]
+}
