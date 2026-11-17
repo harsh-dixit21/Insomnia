@@ -1,0 +1,5 @@
+{
+  "scenario": "unclosed block comment",
+  "sql": "SELECT x FROM t /* ROWNUM UPDATE",
+  "expectedFlags": []
+}
