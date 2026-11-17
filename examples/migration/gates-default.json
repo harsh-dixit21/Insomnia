@@ -1,0 +1,10 @@
+{
+  "scenario": "gates default",
+  "sql": "SELECT x FROM t",
+  "expectedFlags": [],
+  "expectedGates": [
+    "CDC confirmed: Unknown.",
+    "Reconciliation confirmed: Unknown.",
+    "Critical report: Critical customer lookup"
+  ]
+}
