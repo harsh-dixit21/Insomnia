@@ -1,0 +1,7 @@
+{
+  "scenario": "merge",
+  "sql": "MERGE INTO t USING u ON (t.id = u.id) WHEN MATCHED THEN UPDATE SET t.x = u.x",
+  "expectedFlags": [
+    "Review write semantics"
+  ]
+}
