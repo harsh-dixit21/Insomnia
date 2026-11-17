@@ -1,0 +1,5 @@
+{
+  "scenario": "line comment",
+  "sql": "SELECT x FROM t -- ROWNUM UPDATE NVL(x)",
+  "expectedFlags": []
+}
