@@ -1,0 +1,7 @@
+{
+  "scenario": "decode comment gap",
+  "sql": "SELECT DECODE/* note */(x, 1, 2) FROM t",
+  "expectedFlags": [
+    "Review DECODE"
+  ]
+}
