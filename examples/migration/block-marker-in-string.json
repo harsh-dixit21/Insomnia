@@ -1,0 +1,7 @@
+{
+  "scenario": "block marker in string",
+  "sql": "SELECT '/*' AS start_text, ROWNUM, '*/' AS end_text FROM t",
+  "expectedFlags": [
+    "Review ROWNUM"
+  ]
+}
