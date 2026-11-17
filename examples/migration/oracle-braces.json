@@ -1,0 +1,5 @@
+{
+  "scenario": "oracle braces",
+  "sql": "SELECT Q'{buyer's DELETE}' FROM t",
+  "expectedFlags": []
+}
