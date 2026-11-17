@@ -1,0 +1,7 @@
+{
+  "scenario": "connect by",
+  "sql": "SELECT id FROM t CONNECT BY PRIOR id = parent_id",
+  "expectedFlags": [
+    "Hierarchical CONNECT BY"
+  ]
+}
