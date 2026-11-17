@@ -1,0 +1,7 @@
+{
+  "scenario": "connect by comment",
+  "sql": "SELECT id FROM t CONNECT/* note */BY PRIOR id = parent_id",
+  "expectedFlags": [
+    "Hierarchical CONNECT BY"
+  ]
+}
