@@ -1,0 +1,5 @@
+{
+  "scenario": "write keyword prefix",
+  "sql": "SELECT updated_at, deleted_at, merge_count FROM t",
+  "expectedFlags": []
+}
