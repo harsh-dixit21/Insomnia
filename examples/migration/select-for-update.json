@@ -1,0 +1,7 @@
+{
+  "scenario": "select for update",
+  "sql": "SELECT x FROM t FOR UPDATE",
+  "expectedFlags": [
+    "Review write semantics"
+  ]
+}
