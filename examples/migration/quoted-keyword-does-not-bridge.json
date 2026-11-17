@@ -1,0 +1,5 @@
+{
+  "scenario": "quoted keyword does not bridge",
+  "sql": "SELECT CONNECT AS marker, 'example' AS BY_WORD FROM t",
+  "expectedFlags": []
+}
