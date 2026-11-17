@@ -1,0 +1,7 @@
+{
+  "scenario": "oracle quote followed by code",
+  "sql": "SELECT q'[buyer's -- UPDATE]', DECODE(x, 1, 0) FROM t",
+  "expectedFlags": [
+    "Review DECODE"
+  ]
+}
