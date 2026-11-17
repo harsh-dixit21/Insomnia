@@ -1,0 +1,5 @@
+{
+  "scenario": "rownum identifier",
+  "sql": "SELECT rownum_total FROM t",
+  "expectedFlags": []
+}
