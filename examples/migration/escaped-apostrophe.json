@@ -1,0 +1,5 @@
+{
+  "scenario": "escaped apostrophe",
+  "sql": "SELECT 'customer''s UPDATE note' FROM t",
+  "expectedFlags": []
+}
