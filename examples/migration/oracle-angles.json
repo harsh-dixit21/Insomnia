@@ -1,0 +1,5 @@
+{
+  "scenario": "oracle angles",
+  "sql": "SELECT q'<user's NVL(x)>' FROM t",
+  "expectedFlags": []
+}
