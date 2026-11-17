@@ -1,0 +1,7 @@
+{
+  "scenario": "delete",
+  "sql": "DELETE FROM t WHERE x = 1",
+  "expectedFlags": [
+    "Review write semantics"
+  ]
+}
