@@ -1,0 +1,7 @@
+{
+  "scenario": "rownum filter",
+  "sql": "SELECT * FROM t WHERE ROWNUM < 10",
+  "expectedFlags": [
+    "Review ROWNUM"
+  ]
+}
