@@ -1,0 +1,5 @@
+{
+  "scenario": "ansi select",
+  "sql": "SELECT COALESCE(x, 0) FROM t",
+  "expectedFlags": []
+}
