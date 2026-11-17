@@ -1,0 +1,7 @@
+{
+  "scenario": "connect by newline",
+  "sql": "SELECT id FROM t CONNECT\nBY PRIOR id = parent_id",
+  "expectedFlags": [
+    "Hierarchical CONNECT BY"
+  ]
+}
