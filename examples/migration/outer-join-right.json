@@ -1,0 +1,7 @@
+{
+  "scenario": "outer join right",
+  "sql": "SELECT * FROM t, u WHERE t.id = u.id(+)",
+  "expectedFlags": [
+    "Review Oracle outer-join"
+  ]
+}
