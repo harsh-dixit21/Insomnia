@@ -1,0 +1,5 @@
+{
+  "scenario": "escaped identifier",
+  "sql": "SELECT \"report\"\" UPDATE\" FROM t",
+  "expectedFlags": []
+}
