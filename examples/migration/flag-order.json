@@ -1,0 +1,9 @@
+{
+  "scenario": "flag order",
+  "sql": "SELECT DECODE(x, 1, ROWNUM), NVL(y, 0) FROM t",
+  "expectedFlags": [
+    "Review NVL",
+    "Review DECODE",
+    "Review ROWNUM"
+  ]
+}
