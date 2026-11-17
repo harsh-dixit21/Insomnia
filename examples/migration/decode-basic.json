@@ -1,0 +1,7 @@
+{
+  "scenario": "decode basic",
+  "sql": "SELECT DECODE(x, 1, 'a', 'b') FROM t",
+  "expectedFlags": [
+    "Review DECODE"
+  ]
+}
