@@ -1,5 +1,7 @@
 # Runnable evaluation examples
 
+Run `npm run check:migration` to check 52 [SQL migration review cases](migration/README.md) covering syntax flags, quotes, comments, and migration gates.
+
 Run `npm run check:knowledge` to verify evidence matching and ranking across 52 [knowledge search cases](knowledge/README.md).
 
 The [SQL sandbox suite](sql/README.md) covers 53 query results and rejection cases. Run `npm run check:sql` to verify the local query guard and SQLite worker against synthetic data.
