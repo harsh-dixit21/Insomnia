@@ -1,0 +1,7 @@
+{
+  "scenario": "comment with unpaired apostrophe",
+  "sql": "-- buyer's note\nSELECT NVL(x, 0) FROM t",
+  "expectedFlags": [
+    "Review NVL"
+  ]
+}
