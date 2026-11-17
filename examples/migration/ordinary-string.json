@@ -1,0 +1,5 @@
+{
+  "scenario": "ordinary string",
+  "sql": "SELECT 'NVL(x), DECODE(x), ROWNUM, CONNECT BY, (+), DELETE' FROM t",
+  "expectedFlags": []
+}
