@@ -1,0 +1,7 @@
+{
+  "scenario": "block marker in identifier",
+  "sql": "SELECT \"/*\", NVL(x, 0), \"*/\" FROM t",
+  "expectedFlags": [
+    "Review NVL"
+  ]
+}
