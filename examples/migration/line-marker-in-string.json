@@ -1,0 +1,7 @@
+{
+  "scenario": "line marker in string",
+  "sql": "SELECT '--' AS value, NVL(x, 0) FROM t",
+  "expectedFlags": [
+    "Review NVL"
+  ]
+}
