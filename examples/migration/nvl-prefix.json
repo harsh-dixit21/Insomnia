@@ -1,0 +1,5 @@
+{
+  "scenario": "nvl prefix",
+  "sql": "SELECT NVL2(x, 1, 0) FROM t",
+  "expectedFlags": []
+}
