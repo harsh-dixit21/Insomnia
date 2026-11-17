@@ -1,0 +1,7 @@
+{
+  "scenario": "rownum qualified",
+  "sql": "SELECT t.ROWNUM FROM t",
+  "expectedFlags": [
+    "Review ROWNUM"
+  ]
+}
