@@ -1,0 +1,7 @@
+{
+  "scenario": "nvl spacing",
+  "sql": "SELECT NVL \t (x, 0) FROM t",
+  "expectedFlags": [
+    "Review NVL"
+  ]
+}
