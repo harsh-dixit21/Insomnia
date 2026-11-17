@@ -1,0 +1,5 @@
+{
+  "scenario": "block comment",
+  "sql": "/* CONNECT BY ROWNUM */ SELECT x FROM t",
+  "expectedFlags": []
+}
