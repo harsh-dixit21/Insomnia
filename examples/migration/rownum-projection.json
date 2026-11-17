@@ -1,0 +1,7 @@
+{
+  "scenario": "rownum projection",
+  "sql": "SELECT rownum, x FROM t",
+  "expectedFlags": [
+    "Review ROWNUM"
+  ]
+}
