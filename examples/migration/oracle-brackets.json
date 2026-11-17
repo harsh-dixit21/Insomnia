@@ -1,0 +1,5 @@
+{
+  "scenario": "oracle brackets",
+  "sql": "SELECT q'[buyer's UPDATE]' FROM t",
+  "expectedFlags": []
+}
