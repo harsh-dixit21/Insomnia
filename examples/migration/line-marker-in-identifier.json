@@ -1,0 +1,7 @@
+{
+  "scenario": "line marker in identifier",
+  "sql": "SELECT \"--\", DECODE(x, 1, 2) FROM t",
+  "expectedFlags": [
+    "Review DECODE"
+  ]
+}
